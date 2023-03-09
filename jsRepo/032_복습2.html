@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복습2</title>
+    <style>
+        #target
+        {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+        <h2 id="temp">복습2</h2>
+
+        <button onclick="changeColor('h2[id=temp]');">유저가 입력한 색으로 글자 색 변경</button>
+
+        <script>
+
+            function changeColor(input)
+            {
+                let temp = document.querySelector(input);
+                let color = prompt('글자색을 입력하세요');
+                temp.style.color = color;
+            }
+
+        </script>
+
+        <hr>
+
+        <div id="target">표적</div>
+        <button onclick="chageSize();">유저가 입력한 사이즈로 변경</button>
+
+        <script>
+
+            function chageSize() {
+                target = document.querySelector("#target");
+                x = prompt('가로 길이');
+                y = prompt('세로 길이');
+
+                target.style.width = x + 'px';
+                target.style.height = y + 'px';
+            }
+
+        </script>
+
+</body>
+</html>

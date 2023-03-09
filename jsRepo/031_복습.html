@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복습</title>
+</head>
+<body>
+    
+    <h1 id="target">복습</h1>
+    
+    <button onclick="f01();">글자 색 변경</button>
+    <script>
+
+        function f01()
+        {
+            
+            let x = document.querySelector('#target');
+            let color = prompt('색입력하세요');
+            x.style.backgroundColor = color;
+        }
+    </script>
+
+    <hr>
+
+    <div id="div01" style="background-color: red;">얖</div>
+    <button onclick="changeBoxSize();">박스 사이즈 100</button>
+    <script>
+        function changeBoxSize()
+        {
+            let x = document.querySelector('#div01');
+            x.style.width = '100px';
+            x.style.height = '100px';
+        }
+    </script>
+
+    <hr>
+
+    아이디 : <input type="text" name="memberId" value="">
+    <br>
+    비밀번호 : <input type="password" name="memberPwd" value="">
+    <button onclick="login('input[name=memberId]')">로그인</button>
+    <script>
+        function login(input){
+            let temp = document.querySelector(input);
+            console.log(temp.value);
+            const memberId = document.querySelector('input[name=memberId]')
+            const memberPwd = document.querySelector('input[name=memberPwd]')
+
+            if(memberId.value == 'admin' && memberPwd.value == '1234')
+            {
+                alert('로그인성공');
+            }
+            else
+            {
+                alert('로그인실패');
+            }
+        }
+    </script>
+</body>
+</html>
