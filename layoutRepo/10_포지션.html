@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션복습</title>
+    <style>
+
+        .wrap
+        {
+            width: 60%;
+            height: 500px;
+            margin-left: 20%;
+            border: 3px solid black;
+
+            position: relative;
+        }
+        #target
+        {
+            width: 100px;
+            height: 100px;
+
+            position: sticky;
+            top: 0;
+
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .temp-space
+        {
+            height: 100vh;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>포지션 복습</h1>
+    <hr>
+    <pre style="font-size: 14pt; margin-left:-50px;">
+        static : 기본값
+        relative : 
+        absolute : 
+        fixed : 항상 고정된 위치
+        sticky : 스크롤을 내리다 만난곳부터 고정된 위치. 부모요소 범위까지만.
+    </pre>
+
+    <div class="wrap">
+        <div id="target">
+            <img src="https://cdn.spotvnews.co.kr/news/photo/202302/587406_815959_1543.jpg" alt="">
+        </div>
+    </div>
+    
+    <div class="temp-space">
+
+    </div>
+
+</body>
+</html>

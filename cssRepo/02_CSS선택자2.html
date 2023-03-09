@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자2</title>
+    <style>
+        /* = : 완전 일치하는 것만 가져옴. */
+        /*
+            div[name=n1]
+            {
+                background-color: red;
+            }
+        */
+
+        /* ~= : 포함된거 가져옴*/
+        /*
+            div[name~=n1]{
+                background-color: red;
+            }
+        */
+
+        /* |= : 특정단어로 시작하는 요소를 가져옴 ('-' 로 단어를 구분) */
+        /* 
+            div[class|=div]{
+            background-color: blue;;
+        } 
+        */
+
+        /* ^= :  특정값으로 시작하는 요소를 가져옴 */
+        /* 
+        div[name^=n]
+        {
+            background-color: aquamarine;
+        } 
+        */
+
+        /* $= : 특정값으로 끝나는 요소를 가져옴. */
+        /* 
+        div[class$=v]
+        {
+            background-color: cadetblue;
+        }
+        */
+
+        /* *= : 포함하는 요소를 가져옴.(숫자 X) */
+        /* 
+        div[class*=zzz]
+        {
+            background-color:coral
+        }
+        */
+
+
+        /* ===================================================================================================================== */
+
+        /* 자식, 후손 */
+        /* 
+        자식 : 요소 > 요소
+        #test01 > h4
+        {
+            background-color: firebrick;
+        } 
+        */
+
+        /* 
+        후손 : 요소 요소
+        #test01  h4
+        {
+            background-color: firebrick;
+        } 
+        */
+
+        /* 
+        #test01 > ul > h4
+        {
+            background-color: skyblue;
+        } 
+        */
+
+        /* ===================================================================================================================== */
+
+        /* 동위 선택자 */
+        /* 
+        #div-test + div
+        {
+            background-color: silver;
+        }
+        #div-test ~ div
+        {
+            background-color: silver;
+        }
+        */
+
+        /* ===================================================================================================================== */
+
+        /* 반응 선택자 */
+        /*
+        #d01:hover
+        {
+            background-color: palevioletred;
+        }
+        #d01:active
+        {
+            background-color: powderblue;
+        }
+        #d02:hover
+        {
+            background-color: pink;
+        }
+        */
+
+        /* ===================================================================================================================== */
+
+        /* 상태 선택자 */
+
+        /*
+        #check-test:checked
+        {
+            width: 100px;
+            height: 100px;
+        }
+        
+        #focus-test:focus
+        {
+            background-color:yellow;
+        }
+
+        input:enabled
+        {
+            background-color: yellowgreen;
+        }
+
+        #disabled-test:disabled
+        {
+            background-color: violet;
+        }
+        */
+
+        /* ===================================================================================================================== */
+
+        /* 일반 구조 선택자 */
+        /*
+            first-child
+            last-child
+            nth-child(숫자)
+            nth-child(2n)
+            nth-child(even)
+            nth-child(2n+1)
+            nth-child(odd)
+            nth-last-child( )
+        */
+        /*
+        #test-n span:first-child
+        {
+            background-color: bisque;
+        }
+
+        #test-n span:nth-child(3)
+        {
+            background-color: salmon;
+        }
+
+        #test-n span:nth-child(2n)
+        {
+            background-color:slateblue;
+        }
+
+        #test-n span:nth-last-child(2)
+        {
+            background-color:powderblue;
+        }
+
+        #test-n label:last-child
+        {
+            background-color:seagreen;
+        }
+        */
+
+         /* ===================================================================================================================== */
+
+        /* 형태 구조 선택자 */
+        /* 위의 경우와 다름.(last나 first. 위는 자식 child를 대상으로 함) 차이를 인지할 것 */
+
+        /*
+            first-of-type
+            last-of-type
+            nth-of-type( )
+            nth-last-of-type( )
+        */
+
+        /* 
+        #test03 p:first-of-type
+        {
+            background-color:olivedrab;
+        }
+
+        #test03 p:last-of-type
+        {
+            background-color:tomato;
+        }
+
+        #test03 p:nth-of-type(2)
+        {
+            background-color:cornflowerblue;
+        }
+
+        #test03 p:nth-last-of-type(3)
+        {
+            background-color:crimson;
+        } 
+        */
+
+        /* ===================================================================================================================== */
+
+        /* 가상 선택자 */
+
+        /*
+            first-letter
+            first-line
+            selection
+            before : 요소 앞 공간을 선택
+            after : 요소 뒤 공간을 선택
+        */
+
+        /* 
+        #test04 p::first-letter
+        {
+            background-color:tomato;
+        }
+
+        #test04 p::first-line
+        {
+            background-color: darkcyan;
+        }
+
+        #test04 p::selection
+        {
+            background-color:crimson;
+        }
+
+        #test04 p::before
+        {
+            content: "애국가";
+            background-color: yellow;
+        }
+        
+        #test04 p::after
+        {
+            content: "우리나라";
+            background-color: violet;
+        } 
+        */
+
+
+
+        /* ===================================================================================================================== */
+
+        /* 부정 선택자 */
+
+        #test05 p:not(.class)
+        {
+            background-color:slateblue;
+        }
+
+        #test05 p:not(:nth-child(3))
+        {
+            background-color: violet;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>선택자2</h1>
+    <hr>
+
+    <h2>1. 기본 속성 선택자</h2>
+    
+    <pre>
+        기본 선택자 뒤에 [ ] 에 속성과 속성값을 작성
+
+        선택자[속성 = 속성값]
+        {
+            스타일
+        }
+    </pre>
+
+
+    <div class="div-classz" name="n1">div 1</div>
+    <div class="div-classzz" name="n2">div 2</div>
+    <div class="div-classzzz" name="n3 n1">div 3</div>
+    <div class="class-divzzzz" name="4">div 4</div>
+    
+    <br>
+    <hr>
+
+    <h2>2. 자식, 후손</h2>
+    <!-- 
+        자식 : 바로 밑
+        후손 : 하위
+     -->
+
+     <pre>
+        1) 자식
+            요소 > 요소 {
+                스타일
+            }
+
+        2) 후손
+            요소 요소 {
+                스타일
+            }
+     </pre>
+
+     <div id="test01">
+        <h4>자식01</h4>
+        <h4>자식02</h4>
+        <ul>
+            <h4>&lt;ul&gt; 안의 &lt;h4&gt;</h4>
+            <li>&lt;ul&gt; 안의 &lt;li&gt;</li>
+            <li>&lt;ul&gt; 안의 &lt;li&gt;</li>
+        </ul>
+     </div>
+
+     <br>
+     <hr>
+
+     <h2>3. 동위 선택자</h2>
+
+     <pre>
+        1) a 뒤 b 한 개 
+            a + b
+            {
+                스타일
+            }
+
+        2) a 뒤 모든 b
+            a ~ b
+            {
+                스타일
+            }
+     </pre>
+
+     <div id="div-test">div1</div>
+     <div>div2</div>
+     <div>div3</div>
+     <div>div4</div>
+     <div>div5</div>
+
+    <br>
+    <hr>
+
+    <h2>4. 반응 선택자</h2>
+
+    <pre>
+        1) active : 활성화된(ex.클릭하는) 요소
+            선택자:active
+            {
+                스타일
+            }
+
+        2) hover : 마우스 올려놓은 요소
+            선택자:hover
+            {
+                스타일
+            }
+    </pre>
+
+    <div id="d01">div1</div>
+    <div id="d02">div2</div>
+
+    <br>
+    <hr>
+
+    <h2>5. 상태 선택자</h2>
+
+    <pre>
+        입력 양식의 상태에 따라 선태됨
+
+        1) 체크된 상태
+            선택자:checked
+            {
+                스타일
+            }
+
+        2) 초점이 맞춰진 상태
+            선택자:focus
+            {
+                스타일
+            }
+
+        3) 사용 가능한 상태
+            선택자:enabled
+            {
+                스타일
+            }
+
+        4) 사용 불가능한 상태
+            선택자:disabled
+            {
+                스타일
+            }
+    </pre>
+
+    <input type="checkbox" id="check-test">
+    <br>
+
+    <input type="text" id="focus-test">
+    <br>
+
+    <input type="button" value="졸음" id="enable-test">
+    <br>
+
+    <input type="button" value="잠깸" disabled id="disabled-test">
+    <br>
+
+
+    <hr>
+    
+    <h2>6. 일반 구조 선택자</h2>
+
+    <div id="test-n">
+        <span>스팬01</span>
+        <span>스팬02</span>
+        <span>스팬03</span>
+        <span>스팬04</span>
+        <span>스팬05</span>
+        <label>라벨</label>
+    </div>
+
+    <br>
+    <hr>
+
+    <h2>7. 형태 구조 선택자</h2>
+
+    <pre>
+        특정한 위치에 있는 태그 선택
+    </pre>
+
+    <div id="test03">
+        <pre>피나고 알베기고 이갈리는</pre>
+        <p>피01</p>
+        <p>피02</p>
+        <p>피03</p>
+        <p>피04</p>
+        <p>피05</p>
+        <pre>피알이</pre>
+    </div>
+
+    <br>
+    <hr>
+
+    <h2>8. 가상 선택자</h2>
+
+    <pre>
+        가상의 요소를 선택
+    </pre>
+
+    <div id="test04">
+        <p>
+            동해물과
+            <br>
+            백두산이
+            <br>
+            마르고 닳도록
+            <br>
+            하나님이
+            <br>
+            보우하사
+        </p>
+    </div>
+
+
+    <br>
+    <hr>
+    
+    <h2>9. 부정 선택자</h2>
+
+    <pre>
+        지금까지의 선택자에 대해 반대로 적용
+    </pre>
+
+    <div id="test05">
+        <!-- emmet 검색 -->
+        <!-- p{피$}*4 -->
+        <p class="abc">피1</p>
+        <p>피2</p>
+        <p>피3</p>
+        <p>피4</p>
+        <p class="abc">피5</p>
+    </div>
+    
+
+
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

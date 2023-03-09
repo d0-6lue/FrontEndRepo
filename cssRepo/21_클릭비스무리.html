@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭 비스무리</title>
+    <style>
+        #target
+        {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+        #invisible-cb
+        {
+            display: none;
+        }
+        #target > label
+        {
+            cursor: pointer;
+        }
+        .change-box
+        {
+            width: 100%;
+            height: 50px;
+            background-color: blue;
+        }
+        #invisible-cb:checked ~ .change-box
+        {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="target">
+        <input id="invisible-cb" type="checkbox">
+        <label for="invisible-cb"> 누르셈 </label>
+        <div class="change-box">ㅇㅇㅇㅇ</div>
+    </div>
+</body>
+</html>

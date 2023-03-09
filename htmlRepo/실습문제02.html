@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문관리</title>
+</head>
+<body>
+    
+    <h1>주문관리</h1>
+
+    <form>
+        <fieldset>
+            <legend>주문자 정보</legend>
+
+            <strong>1. 주문자명 : </strong> <input type="text" placeholder="name">
+            <br><br>
+            <strong>2. emial : </strong> <input type="text" placeholder="1dargon@yaho.com">
+            <br><br>
+            <strong>3. 홈페이지 : </strong> <input type="text" placeholder="https://">
+            <br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>주문정보</legend>
+            <ul>
+                <li>
+                    <strong>상품명 : </strong> <input type="text">
+                </li>
+                <br>
+                <li>
+                    <strong>주문수량 : </strong> <input type="number" min="100" placeholder="최소 100">
+                </li>
+                <br>
+                <li>
+                    <strong>할인율 : </strong><input type="range" max="100" step="5"></input>
+                </li>
+                <br>
+                <li>
+                    <strong>요청사항 : </strong><textarea name="" id="" cols="20" rows="2"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <br>
+        <input type="submit" value="주문하기">
+
+    </form>
+
+
+
+
+
+
+</body>
+</html>

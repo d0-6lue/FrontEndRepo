@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문하기</title>
+</head>
+<body>
+    
+    <h1>주문하기</h1>
+
+    <form action="">
+    <strong>고객명 : </strong> <input type="text">
+    <br><br>
+    <strong>전화번호 : </strong> <input type="tel">
+    <br><br>
+    <strong>E-mail : </strong> <input type="eamil">
+
+    <fieldset>
+        <legend><strong>피자 사이즈</strong></legend>
+        <label>
+            <input type="radio" name="size"> Samll
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="size"> Medium
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="size"> Large
+        </label>
+        <br>
+    </fieldset>
+
+    <fieldset>
+        <legend><strong>토핑 선택</strong></legend>
+        <label>
+            <input type="checkbox" name="topping"> 베이컨
+        </label>
+        <br><br>
+        <label>
+            <input type="checkbox" name="topping"> 치즈
+        </label>
+        <br><br>
+        <label>
+            <input type="checkbox" name="topping"> 양파
+        </label>
+        <br><br>
+        <label>
+            <input type="checkbox" name="topping"> 버섯
+        </label>
+        <br>
+    </fieldset>
+
+    <br>
+
+    <strong>희망 배송 시간 : </strong> <input type="time">
+
+    <br><br>
+
+    <strong>배송 시 요청사항 : </strong><textarea name="" id="" cols="20" rows="3"></textarea>
+
+    <br><br>
+
+    <input type="submit" value="주문하기">
+    </form>
+
+</body>
+</html>

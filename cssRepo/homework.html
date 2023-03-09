@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙제사이트임</title>
+    <style>
+        body
+{
+    margin: 0;
+    padding: 0;
+
+    background-color: rgba(35, 35, 35, 1);
+}
+
+.wrap
+{
+    width: 100%;
+    height: 100%;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(45, 45, 55, 1);
+}
+
+/* 제일 위 */
+.apex-bar
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 35px;
+    background-color: rgba(20, 20, 20, 0.87);
+    box-sizing: border-box;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.company-logo > a> img
+{
+    width: 125px;
+    position: relative;
+    top: 7px;
+    left: 25px;
+}
+
+#apex-games-btn
+{
+    display: none;
+}
+
+#apex-games-btn:checked ~ .apex-bar > span > .games > .triangle-box
+{
+    transform: rotateX(180deg);
+    transform-origin: center;
+    transition-duration: 0.2s;
+}
+
+.games
+{
+    position: relative;
+    top: 5px;
+    left: 70px;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #9a9a9a;
+}
+
+.games:hover
+{
+    color: #eeeeee;
+}
+
+.games:hover > .triangle-box > .triangle
+{
+    border-top: 7px solid #eeeeee;
+}
+
+.triangle-box
+{
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: -13px;
+    left: 190px;
+}
+
+.triangle
+{
+    width: 0px;
+    height: 0px;
+    border-top: 7px solid #9a9a9a;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    position: relative;
+    box-sizing: border-box;
+    top: 7px;
+    left: 5px;
+}
+
+.apex-bar-gameslist{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 35px;
+    z-index: 2000;
+
+    visibility: hidden;
+}
+
+#apex-games-btn:checked ~ .apex-bar-gameslist
+{
+    visibility: visible;
+}
+
+.gamelist-bar
+{
+    width: 100%;
+    height: 90px;
+    box-sizing: border-box;
+    display: inline-flex;
+    background-color: black;
+}
+
+.gamelist-bar > ul
+{
+    margin: 0;
+    padding: 0 5%;
+    width: 90%;
+    position: relative;
+    display: inline-flex;
+}
+
+.gamelist-bar > ul > li
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    display:contents;
+}
+
+.gamelist-bar > ul > li > a
+{
+    margin: 0;
+    padding: 2.1% 5%;
+    color: rgba(123, 123, 123, 0.75);
+    text-decoration: none;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.gamelist-bar > ul > li > a:hover
+{
+    color: #eeeeee;
+    border-bottom: 3px solid rgba(200, 159, 35, 0.8);
+}
+
+.gamelist-bar > ul > li > a:hover ~ .gamesImg
+{
+    background-image: url(https://s1.pearlcdn.com/global_static/img/bg_network_bdo.jpg);
+}
+
+.bdo-gameImg
+{
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 90px;
+    left: -1px;
+    box-sizing: border-box;
+    background-color: #333333;
+    background-image: url(https://s1.pearlcdn.com/global_static/img/bg_network_bdo.jpg);
+    visibility: hidden;
+}
+
+.bdo-gameImg:hover
+{
+    visibility: visible;
+}
+
+#a-bdo:hover + .bdo-gameImg
+{
+    visibility: visible;
+}
+
+.bdom-gameImg
+{
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 90px;
+    left: -1px;
+    box-sizing: border-box;
+    background-color: #333333;
+    background-image: url(https://s1.pearlcdn.com/global_static/img/bg_network_bdm.jpg);
+    visibility: hidden;
+}
+
+.bdom-gameImg:hover
+{
+    visibility: visible;
+}
+
+#a-bdom:hover ~ .bdom-gameImg
+{
+    visibility: visible;
+}
+
+.crimsondesert-gameImg
+{
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 90px;
+    left: -1px;
+    box-sizing: border-box;
+    background-color: #333333;
+    background-image: url(https://s1.pearlcdn.com/global_static/img/bg_network_cd_v3.jpg);
+    visibility: hidden;
+}
+
+.crimsondesert-gameImg:hover
+{
+    visibility: visible;
+}
+
+#a-crimsondesert:hover ~ .crimsondesert-gameImg
+{
+    visibility: visible;
+}
+
+.dokev-gameImg
+{
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 90px;
+    left: -1px;
+    box-sizing: border-box;
+    background-color: #333333;
+    background-image: url(https://s1.pearlcdn.com/global_static/img/bg_network_dokev.jpg);
+    visibility: hidden;
+}
+
+.dokev-gameImg:hover
+{
+    visibility: visible;
+}
+
+#a-dokev:hover ~ .dokev-gameImg
+{
+    visibility: visible;
+}
+
+.plan8-gameImg
+{
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 90px;
+    left: -1px;
+    box-sizing: border-box;
+    background-color: #333333;
+    background-image: url(https://s1.pearlcdn.com/global_static/img/bg_network_plan8.jpg);
+    visibility: hidden;
+}
+
+.plan8-gameImg:hover
+{
+    visibility: visible;
+}
+
+#a-plan8:hover ~ .plan8-gameImg
+{
+    visibility: visible;
+}
+@media screen and (max-width: 1565px)
+{ 
+    /* 메뉴 리스트 <ul> */
+    .header-menu-bar > .header-menu
+    {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 200px;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        display: inline-block;
+
+        visibility: hidden;
+    }
+}
+@media screen and (max-width: 960px)
+{
+    .games
+    {
+        visibility: hidden;
+    }
+
+    .header-menu-bar > .util-bar > .util-menu > li > button
+    {
+        visibility: hidden;
+    }
+
+    .header-menu-bar > .util-bar > .util-menu > li > svg
+    {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+    /* 제일 위 */
+    .apex-bar
+    {
+        display: none;
+    }
+
+    .bg-box
+    {
+        display: none;
+    }
+
+    /* 로고 */
+    .header-logo
+    {
+        width: auto;
+        height: 100%;
+        margin-left: 0px;
+
+        position: relative;
+        top: 0;
+        left: 120%;
+    }
+
+
+    /* 검색, 로그인, 게임시작 */
+    .header-menu-bar > .util-bar
+    {
+        visibility: hidden;
+    }
+}
+
+#small-screen-menu-icon
+{
+    visibility: hidden;
+}
+
+#small-screen-menu-icon >img
+{
+    width: 10px;
+    height: 10px;
+
+    border: 1px solid red;
+}
+
+    
+/* 검정 막대 */
+.header-menu-bar
+{
+    width: 100%;
+    height: 77px;
+
+    background-color: black;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1550;
+
+    box-sizing: border-box;
+}
+
+/* 로고 */
+.header-menu-bar .logo
+{
+    width: auto;
+    height: 100%;
+    margin-left: 50px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 메뉴 막대 */
+.header-menu-bar .header-logo
+{
+    margin-bottom: 10px;
+    width: 120px;
+    height: 100%;
+}
+
+/* 메뉴 리스트 <ul> */
+.header-menu-bar > .header-menu
+{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+/*  상단 메뉴 칸 */
+.header-menu-bar > .header-menu > .header-menu-list
+{
+    height: 100%;
+    position: relative;
+    padding-top: 25px;
+
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+/* 상단 메뉴 링크 */
+.header-menu-bar > .header-menu > .header-menu-list > a
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16pt;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none; 
+
+    padding: 27px 30px;
+    box-sizing: border-box;
+}
+
+/* hover 노란 밑줄 */
+.header-menu-bar > .header-menu > .header-menu-list > a:hover
+{
+    text-decoration-line:underline;
+    text-underline-position: under;
+    text-decoration-color:rgba(200, 159, 35, 0.8);
+}
+
+/* 검색, 로그인, 게임시작 */
+.header-menu-bar > .util-bar
+{
+    width: 350px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+    display: block;
+}
+
+.header-menu-bar > .util-bar > .util-menu
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+.header-menu-bar > .util-bar > .util-menu > li
+{
+    margin: 0;
+    padding: 0;
+    
+    height: 100%;
+
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.header-menu-bar > .util-bar > .util-menu > li > button
+{
+    width: 32px;
+    height: 32px;
+
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 15px;
+    padding: 0;
+
+    float:left;
+
+    display: block;
+
+    background-color: transparent;
+    cursor:pointer;
+}
+
+.header-menu-bar > .util-bar > .util-menu > li > svg
+{
+    width: 28px;
+    height: 28px;
+
+    margin-top: 20px;
+    padding: 0;
+
+    display: block;
+}
+
+.header-menu-bar > .util-bar > .util-menu > li > .game-start
+{
+    width: 220px;
+    height: 100%;
+
+    line-height: 75px;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 20pt;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none; 
+
+    position: absolute;
+    right: 0;
+    background: linear-gradient(to bottom, #8f714a, #ad8b53);
+
+    display: block;
+
+    transition: backgroud 3s ease;
+}
+
+/* 게임 시작에 마우스 올리면 색변화 */
+.header-menu-bar > .util-bar > .util-menu > li > .game-start:hover
+{
+    background:rgb(219, 201, 171);
+}
+
+/* 새소식 메뉴 */
+.header-menu > li > .detail-menu-list
+{
+    width: auto;
+    text-align: left;
+    z-index: 1500;
+
+    margin: 0;
+
+    background-color: black;
+
+    position: absolute;
+    top: 75px;
+
+    visibility: hidden;
+}
+
+.header-menu > li > .detail-menu-list > ul
+{
+    padding: 0 0 10px 0;
+    box-sizing: border-box;
+}
+/* 새소식에 마우스 올리면 새소식 메뉴 리스트 출현 */
+.header-menu-bar > .header-menu > .header-menu-list > a:hover + .detail-menu-list
+{
+    visibility: visible;
+}
+
+/* 새소식 말고 메뉴 리스트에 마우스 올려 놓아도 계속 보이게 */
+.header-menu > .header-menu-list > .detail-menu-list:hover
+{
+    visibility: visible;
+    
+}
+
+.header-menu > .header-menu-list > .detail-menu-list > ul > li
+{
+    text-align: left;
+
+    box-sizing: border-box;
+    
+    background-color: black;
+
+    display: block;
+}
+
+/* 리스트중에 마우스 올리면 글자 노란색으로 */
+.header-menu > .header-menu-list > .detail-menu-list > ul > li > a:hover
+{
+    color:rgba(200, 159, 35, 0.8);
+}
+
+.detail-menu-list > ul > li > a
+{
+    font-weight: bold;
+    font-size: 14px;
+    color: #919191;
+    white-space: nowrap;
+    text-decoration: none;
+
+    padding: 12px 30px;
+
+    box-sizing: border-box;
+    display: block;
+}
+
+.detail-menu-list:visited ~ a
+{
+    text-decoration-line:underline;
+    text-underline-position: under;
+    text-decoration-color:rgba(200, 159, 35, 0.8);
+}
+
+.bg-box
+{
+    width: 100%;
+    height: 850px;
+    position: relative;
+    left: 10%;
+    margin: 0 0 0 -175px;
+    padding: 0;
+}
+
+.top-bg
+{
+    width: 2160px;
+    height: 1045px;
+    padding: 0;
+    margin: 0 0 0 0;
+    background-image: url(https://cdn-lostark.game.onstove.com/2018/obt/assets/images/pc/main/@bg_index_issue_v19.jpg?75cd41fde6b83c0ec814f6a0a7b09c39);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    z-index: -100;
+}
+
+.upadte-event-banner
+{
+    width: 1000px;
+    height: 500px;
+    margin: 0;
+    display: block;
+    position:relative;
+    top: 28%;
+    left: 12%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.bm-banner
+{
+    width: 340px;
+    height: 280px;
+    margin-right: 0;
+    padding: 0;
+    position: relative;
+    top: calc(-20% + 1px);
+    left: 1275px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.announcement-banner
+{
+    margin: 0;
+    padding: 0;
+    width: 340px;
+    height: 216px;
+    position: relative;
+    top: calc(-20%);
+    left: 1275px;
+    box-sizing: border-box;
+}
+
+.ue-banner-imgs
+{
+    padding: 0;
+    margin: 0;
+    z-index: 50;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.ue-banner-img > li
+{
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.upadte-event-banner li > #update-tag
+{
+    width: 0px;
+    height: 0px;
+    border-top: 50px solid rgb(7, 55, 165);
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid rgb(7, 55, 165);
+    border-right: 50px solid transparent;
+    position: absolute;
+    top: 0px;
+    box-sizing: border-box;
+    z-index: 200;
+}
+
+.upadte-event-banner li > #update-tag > span
+{
+    font-size: 16pt;
+    font-weight: bold;
+    font-family:"Times New Roman", Times, serif;
+    color: white;
+    position: absolute;
+    top: -20px;
+    left: -55px;
+    transform: rotate(-47deg);
+}
+
+.upadte-event-banner li > a >img
+{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 100;
+    position: absolute;
+}
+
+.upadte-event-banner .ue-banner-list
+{
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 150;
+    position: absolute;
+    top: 438px;
+    background-color: rgba(30, 30, 30, 0.77);
+}
+
+.upadte-event-banner .ue-banner-list > li
+{
+    padding: 0;
+    margin: 0;
+    line-height: 3.6;
+    position: relative;
+    top: 0;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.upadte-event-banner .ue-banner-list > li > button
+{
+    margin: 0 1px;
+    padding: 0;
+    line-height: 3;
+    box-sizing: border-box;
+    color: #eaeaea;
+    font-size: 11pt;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+#swip-btn
+{
+    margin: 0;
+    padding: 0 10px;
+    font-size: 15pt;
+}
+
+.bm-banner > img
+{
+    width: 340px;
+    height: 280px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.announcement-list
+{
+    width: 100%;
+    height: 100%;
+    font-family: "바탕";
+    color: #eaeaea;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(30, 30, 30, 0.77);
+    border: 1px solid black;
+}
+
+.announcement-list > h2
+{
+    margin-left: 15px;
+}
+
+.announcement-list > ul > li
+{
+    margin: 12px 5px;
+    font-family: "굴림";
+    font-size: 12pt;
+}
+
+.search-bar
+{
+    width: 1360px;
+    height: 80px;
+    position: relative;
+    top: -15%;
+    left: 12%;
+    box-sizing: border-box;
+    background-color: rgba(45, 45, 55, 1);
+    border: 0.1px solid rgba(55, 55, 65, 0.77);
+    display:flex;
+}
+
+.search-bar > .text1
+{
+    margin-top: 25px;
+    margin-left: 60px;
+    color: #eaeaea;
+    font-size: 16pt;
+    font-weight: bold;
+    font-family: "바탕";
+}
+
+.search-bar > .char-search
+{
+    line-height: 1;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.search-bar > .char-search > input
+{
+    width: 380px;
+    height: 35px;
+    background-color: rgba(55, 55, 65, 0.77);
+    font-size: 14pt;
+    color: #eaeaea;
+}
+
+.search-bar > .char-search > input::placeholder
+{
+    font-size: 12pt;
+    color: #a1a1a1;
+}
+
+.char-search-btn
+{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 10px;
+    left: -40px;
+}
+
+.char-search-btn > img
+{
+    width: 27px;
+    height:27px;
+    box-sizing: border-box;
+    display:inline-block;
+}
+
+.search-bar > .guide-search
+{
+    line-height: 1;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.search-bar > .text2
+{
+    margin-top: 25px;
+    margin-left: 135px;
+    color: #eaeaea;
+    font-size: 16pt;
+    font-weight: bold;
+    font-family: "바탕";
+}
+
+.search-bar > .guide-search > input
+{
+    width: 380px;
+    height: 35px;
+    background-color: rgba(55, 55, 65, 0.77);
+    font-size: 14pt;
+    color: #eaeaea;
+}
+
+.search-bar > .guide-search > input::placeholder
+{
+    font-size: 12pt;
+    color: #a1a1a1;
+}
+
+.guide-search-btn
+{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 10px;
+    left: -40px;
+}
+
+.guide-search-btn > img
+{
+    width: 27px;
+    height:27px;
+    box-sizing: border-box;
+    display:inline-block;
+}
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <div class="wrap">
+            <input type="checkbox" id="apex-games-btn"></input>
+            <div class="apex-bar">
+                <span class="company-logo">
+                    <a href="https://www.pearlabyss.com/">
+                        <img src="https://s1.pearlcdn.com/global_static/img/img_network_bi.svg" alt="">
+                    </a>
+                </span>
+                <span>
+                    <label for="apex-games-btn" class="games">
+                        GAMES
+                        <div class="triangle-box">
+                            <span class="triangle"></span>
+                        </div>
+                    </label>
+                </span>
+            </div>
+            <div class="apex-bar-gameslist">
+                <div class="gamelist-bar">
+                    <ul>
+                        <li>
+                            <a id="a-bdo" href="https://www.kr.playblackdesert.com/" target="_blank">
+                                검은사막
+                            </a>
+                            <div class="bdo-gameImg">
+
+                            </div>
+                        </li>
+                        <li>
+                            <a id="a-bdom" href="https://www.blackdesertm.com/">
+                                검은사막 모바일
+                            </a>
+                            <div class="bdom-gameImg">
+
+                            </div>
+                        </li>
+                        <li>
+                            <a id="a-crimsondesert" href="https://crimsondesert.pearlabyss.com/">
+                                붉은사막
+                            </a>
+                            <div class="crimsondesert-gameImg">
+
+                            </div>
+                        </li>
+                        <li>
+                            <a id="a-dokev" href="https://dokev.pearlabyss.com/">
+                                도깨비
+                            </a>
+                            <div class="dokev-gameImg">
+
+                            </div>
+                        </li>
+                        <li>
+                            <a id="a-plan8" href="https://plan8.pearlabyss.com/">
+                                플랜8
+                            </a>
+                            <div class="plan8-gameImg">
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-menu-bar">
+                <div class="logo">
+                    <h1>
+                        <a href="https://www.kr.playblackdesert.com/ko-KR/Main/Index" target="_self">
+                            <img src="https://s1.pearlcdn.com/KR/contents/img/common/logo_bdo_kr.svg?v=1" alt="검은사막 리마스터" class="header-logo">
+                        </a>
+                    </h1>
+                </div>
+                <div class="samll-screen-menu">
+
+                </div>
+                    <div class="small-screen-btn">
+                        <span>
+                        <input id="small-screen-menu-icon" type="checkbox">
+                            <label for="small-screen-menu-icon">
+                                <img url="https://previews.123rf.com/images/fokaspokas/fokaspokas1809/fokaspokas180900164/108564673-hamburger-menu-web-icon-white-icon-with-shadow-on-transparent-background.jpg">
+                            </label>
+                    </span>
+                    <div></div>
+                </div>
+                <ul style="list-style-type: none;" class="header-menu">
+                    <li class="header-menu-list">
+                        <a href="https://www.kr.playblackdesert.com/ko-KR/News/Notice" target="_self" class="before-temp">
+                            새소식
+                        </a>
+                        <div class="detail-menu-list">
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/News/Notice?boardType=1">공지사항</a>
+                                </li>
+                                <li><a href="https://www.kr.playblackdesert.com/ko-KR/News/Notice?boardType=2">업데이트</a></li>
+                                <li><a href="https://www.kr.playblackdesert.com/ko-KR/News/Notice?boardType=3">이벤트</a></li>
+                                <li><a href="">GM노트</a></li>
+                                <li><a href="">펄상점</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header-menu-list">
+                        <a href="https://www.kr.playblackdesert.com/ko-KR/GameInfo/Feature" target="_self">
+                            게임 소개
+                        </a>
+                        <div class="detail-menu-list">
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/GameInfo/Feature">
+                                        게임 특징
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/GameInfo/Class/Main">
+                                        클래스 소개
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Wiki">
+                                        모험가 가이드
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header-menu-list">
+                        <a href="https://www.kr.playblackdesert.com/ko-KR/Adventure/Home" target="_self">
+                            모험가 캠프
+                        </a>
+                        <div class="detail-menu-list">
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Adventure/Home">
+                                        모험가
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Adventure/Guild">
+                                        길드
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/BeautyAlbum">
+                                        뷰티앨범
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Photogallery">
+                                        포토갤러리
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Adventure/History">
+                                        업데이트 히스토리
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://trade.kr.playblackdesert.com/Intro/?_ga=2.49034852.315173580.1677857103-1272773836.1675698171">
+                                        통합 거래소
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://tv.playblackdesert.com/ko-KR/BroadCast/Streamer">
+                                        검은사막TV
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Partners">
+                                        파트너 스트리머
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header-menu-list">
+                        <a href="https://payment.kr.playblackdesert.com/ko-KR/Pay/?_ga=2.10744566.315173580.1677857103-1272773836.1675698171" target="_self">
+                            상점
+                        </a>
+                        <div class="detail-menu-list">
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <a href="https://payment.kr.playblackdesert.com/ko-KR/Pay/Home/?_ga=2.35729762.315173580.1677857103-1272773836.1675698171">
+                                        Acoin
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://payment.kr.playblackdesert.com/ko-KR/Shop/Coupon/?_ga=2.35729762.315173580.1677857103-1272773836.1675698171">
+                                        쿠폰 사용
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://payment.kr.playblackdesert.com/ko-KR/Pay/WebShop/?_ga=2.35729762.315173580.1677857103-1272773836.1675698171">
+                                        펄 상자 구매
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header-menu-list">
+                        <a href="https://www.kr.playblackdesert.com/ko-KR/Forum/Main" target="_self">
+                            커뮤니티
+                        </a>
+                        <div class="detail-menu-list">
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Forum/Home/Recent">
+                                        전체글
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Forum/Home/FeedBack">
+                                        피드백 게시판
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Forum?_categoryNo=3">
+                                        자유 게시판
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Forum?_categoryNo=103">
+                                        게임 토론
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Forum?_categoryNo=11">
+                                        모집 & 홍보
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Forum?_categoryNo=12">
+                                        건의 게시판
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Forum?_categoryNo=101">
+                                        팁 & 노하우
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Forum?_categoryNo=102">
+                                        클래스 공략
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Forum?_categoryNo=8">
+                                        팬 아트
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Forum?_categoryNo=2">
+                                        스크린샷 & 영상
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Forum/Qna">
+                                        지식의 오아시스
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header-menu-list">
+                        <a href="https://www.kr.playblackdesert.com/ko-KR/Data/Down/" target="_self">
+                            다운로드
+                        </a>
+                        <div class="detail-menu-list">
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Data/Down/">
+                                        다운로드
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Data/Video/">
+                                        영상
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/Data/Wallpaper/">
+                                        웹페이퍼
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/GameInfo/Soundtracks">
+                                        OST
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="header-menu-list">
+                        <a href="https://kr.pearlabyss.com/Support/Start" target="_self">
+                            고객센터
+                        </a>
+                        <div class="detail-menu-list">
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <a href="https://kr.pearlabyss.com/Support/FAQ/">
+                                        FAQ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://kr.pearlabyss.com/Support/QNA/Write?categoryValue=%EC%8B%A0%EA%B3%A0%EC%84%BC%ED%84%B0">
+                                        신고센터
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.kr.playblackdesert.com/ko-KR/MyPage/MyInfo/AccountSecurity">
+                                        보안센터
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="util-bar">
+                    <ul style="list-style-type: none;" class="util-menu">
+                        <li>
+                            <button>
+                                <img src="https://s1.pearlcdn.com/KR/contents/img/common/icon/icn_search_white.svg?v=1" alt="">
+                            </button>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 197.84 209">
+                                <path style="fill: #fff;" d="M1754.07,151.884c-32.93,0-59.72-27.3-59.72-60.865s26.79-60.863,59.72-60.863,59.71,27.306,59.71,60.863S1786.99,151.884,1754.07,151.884Zm0-106.551c-24.72,0-44.83,20.494-44.83,45.686s20.11,45.691,44.83,45.691,44.83-20.5,44.83-45.691S1778.79,45.333,1754.07,45.333Zm84.03,193.818V232.5c0-18.849-27.58-47.908-84.03-47.908-57.79,0-84.04,29.059-84.04,47.908v6.656h-14.88V232.5c0-30.9,34.45-63.083,98.92-63.083,62.07,0,98.92,32.178,98.92,63.083v6.656H1838.1Z" transform="translate(-1655.16 -30.156)"></path>
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="https://www.kr.playblackdesert.com/ko-KR/Data/Down" class="game-start">
+                                게임시작
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-box">
+                <div class="top-bg">
+                    <div class="upadte-event-banner">
+                        <ul class="ue-banner-imgs">
+                            <li id="ue-banner-img1">
+                                <span id="update-tag">
+                                    <span>UPDATE</span>
+                                </span>
+                                <a href="https://lostark.game.onstove.com/Promotion/Update/230215/Voldaik">
+                                    <img src="https://cdn-lostark.game.onstove.com/uploadfiles/banner/80ca31fec9be4c6fa66921b28f0e66cd.jpg" alt="">
+                                </a>
+                            </li>
+                            <li id="ue-banner-img2"><a href=""><img src="" alt=""></a></li>
+                            <li id="ue-banner-img3"><a href=""><img src="" alt=""></a></li>
+                            <li id="ue-banner-img4"><a href=""><img src="" alt=""></a></li>
+                            <li id="ue-banner-img5"><a href=""><img src="" alt=""></a></li>
+                        </ul>
+                        <ul class="ue-banner-list">
+                            <li>
+                                <button id="swip-btn">&lt;</button>
+                            </li>
+                            <li>
+                                <button id="ue-btn1">신규 대륙 볼다이크</button>
+                            </li>
+                            <li>
+                                <button id="ue-btn2">혼돈의 상아탑 UPDATE</button>
+                            </li>
+                            <li>
+                                <button>2월 출석 이벤트</button>
+                            </li>
+                            <li>
+                                <button>2023 1st 겨울 업데이트</button>
+                            </li>
+                            <li>
+                                <button>하이퍼 익스프레스 더블 PLUS</button>
+                            </li>
+                            <li>
+                                <button id="swip-btn">&gt;</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bm-banner">
+                        <img src="https://cdn-lostark.game.onstove.com/uploadfiles/banner/9fa28a366a9c44c6b9c4642417a0081a.jpg" alt="">
+                    </div>
+                    <div class="announcement-banner">
+                        <div class="announcement-list">
+                            <h2>공지사항</h2>
+                            <ul>
+                                <li>3월 1일(수) 업데이트 내역 안내</li>
+                                <li>3월 1일 신규 캐릭터 생성 가능 수치 ...</li>
+                                <li>알려진 이슈를 안내해 드립니다.(3/2 ...</li>
+                                <li>3월 1일(수) 정기 정검 안내</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="search-bar">
+                        <div class="text1">
+                            전투 정보실
+                        </div>
+                        <div class="char-search">
+                            <input type="text" placeholder=" 캐릭터명을 입력해주세요">
+                            <a class="char-search-btn" href="https://lostark.game.onstove.com/Profile/Character/">
+                                <img src="https://s1.pearlcdn.com/KR/contents/img/common/icon/icn_search_white.svg?v=1" alt="">
+                            </a>
+                        </div>
+                        <div class="text2">
+                            게임 가이드
+                        </div>
+                        <div class="guide-search">
+                            <input type="text" placeholder="검색어를 입력해주세요">
+                            <a class="guide-search-btn" href="https://lostark.game.onstove.com/GameGuide/">
+                                <img src="https://s1.pearlcdn.com/KR/contents/img/common/icon/icn_search_white.svg?v=1" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

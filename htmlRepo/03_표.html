@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 관련 태그</title>
+</head>
+    <h1>표 관련 태그</h1>
+
+    <!-- 
+        표 ( Table )
+        행 과 열을 가짐.
+
+        <table>, <tr>, <td>, <th>
+        <table> : 테이블의 시작 끝.
+        <tr> : 테이블의 행( row )
+        <td> : 테이블의 열( coloum )
+        <th> : <td> + 가운데 정령 + 글자 굵게
+     -->
+
+     <table border="1">
+
+        <caption>시간표</caption>
+
+        <tr>
+
+            <th></th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+
+        </tr>
+
+        <tr>
+
+            <td>1교시</td>
+            <td>영어</td>
+            <td>국어</td>
+            <td>과학</td>
+            <td>미술</td>
+            <td>기술</td>
+
+        </tr>
+
+        <tr>
+
+            <td>2교시</td>
+            <td>도덕</td>
+            <td>체육</td>
+            <td>영어</td>
+            <td>수확</td>
+            <td>사회</td>
+
+        </tr>
+
+     </table>
+    
+     <figure>
+        <figcaption>이번주 시간표 입니다~~~</figcaption>
+        <figcaption>2교시 좋겠다~~~</figcaption>
+     </figure>
+
+     <br><hr><br>
+
+     <table border="1">
+
+        <tr>
+            <th colspan="2">
+                지역별 홍차
+            </th>
+        </tr>
+        <tr>
+            <th rowspan="3">중국</th>
+            <td>정산소종</td>
+            <tr><td>기문</td></tr>
+            <tr><td>운남</td></tr>
+        </tr>
+        <tr>
+            <th rowspan="4">인도 및 스리랑카</th>
+            <td>아삼</td>
+            <tr><td>실론</td></tr>
+            <tr><td>다질링</td></tr>
+            <tr><td>닐기니</td></tr>
+        </tr>
+
+     </table>
+
+     <hr>
+
+     <table border="1">
+
+        <tr><th colspan="6">브랜드</th></tr>
+        <tr>
+            <th rowspan="6">애플</th>
+            <td>노키아</td>
+            <th rowspan="9">삼성</th>
+            <td>진에어</td>
+            
+            <th rowspan="5"> 넥슨</th>
+            <td>카트라이더</td>
+            
+            <tr><td>샤오미</td><td>SK</td><td>넷마블</td></tr>
+            <tr><td>샤오미</td><td>SK</td><td>넷마블</td></tr>
+            <tr><td>코보</td><td>OK EN</td><td>Rush N Cash</td></tr>
+            <tr><td>천재교육</td><td>메가 스터디</td><td>김밥나라</td></tr>
+            <tr><td>라인</td><td>소니</td><th rowspan="4">폴바세티</th><td>공차</td>
+        </tr>
+        <tr>
+            <th rowspan="3">네이버</th>
+            <td>구글</td>
+            <td>다음</td><td>야후</td>
+            <tr><td>오뚜기</td><td>삼양</td><td>농심</td></tr>
+            <tr><td>두부</td><td>전골</td><td>냉면</td></tr>
+        </tr>
+
+     </table>
+
+     <hr>
+
+     <h2>테이블 구조</h2>
+
+     <h3> thead, tbody, tfoot</h3>
+
+     <table border="1">
+
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>주소</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>심원용</td>
+                <td>20</td>
+                <td>우리집</td>
+            </tr>
+            <tr>
+                <td>심투용</td>
+                <td>22</td>
+                <td>역삼</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">총인원</td>
+                <td>2</td>
+            </tr>
+        </tfoot>
+        
+
+
+     </table>
+
+     <hr>
+
+     <table border="1" width="400" hight="400">
+
+        <tr>
+            <td colspan="5" align="center">1</td>
+        </tr>
+        <tr>
+            <td rowspan="4">6</td>
+            <td colspan="4">7</td>    
+        </tr>
+        <tr>
+            <td>12</td><td rowspan="2">13</td><td>14</td><td rowspan="3">15</td>
+        </tr>
+        <tr>
+            <td>17</td> <td>19</td>
+        </tr>
+        <tr>
+            <td colspan="2">22</td><td>24</td>
+        </tr>
+        
+
+     </table>
+
+     <hr>
+
+     <table border="1" width="300" hight="300">
+
+        <tr>
+            <td>1</td><td>2</td><td rowspan="2">3</td><td>4</td>
+        </tr>
+        <tr>
+            <td colspan="2">5</td><td rowspan="2">6</td>
+        </tr>
+        <tr>
+            <td>7</td><td colspan="2">8</td>
+        </tr>
+
+     </table>
+
+     <hr>
+
+     <table border="1" width="300" height="300">
+
+        <tr>
+            <td colspan="2" bgcolor="red">1</td> <td rowspan="2" bgcolor="blue">2</td>
+        </tr>
+        <tr>
+            <td rowspan="2" bgcolor="yellow">4</td> <td>3</td>
+        </tr>
+        <tr>
+            <td colspan="2" bgcolor="black">5</td>
+        </tr>
+
+     </table>
+
+     <hr>
+
+     <table border="1">
+
+        <tr>
+            <th colspan="6">한국의 차</th>
+        </tr>
+        <tr>
+            <td rowspan="6">뿌리차</td>
+            <td>인삼차</td>
+            <td rowspan="9">과일차</td>
+            <td>수정과</td> <td rowspan="5">잎차</td>
+            <td>뽕잎차</td>
+        </tr>
+        <tr>
+            <td>당귀차</td>
+            <td>유자차</td>
+            <td>감잎차</td>
+        </tr>
+        <tr>
+            <td>생강차</td>
+            <td>구기자차</td>
+            <td>솔잎차</td>
+        </tr>
+        <tr>
+            <td>칡차</td>
+            <td>대추차</td>
+            <td>극화차</td>
+        </tr>
+        <tr>
+            <td>둥굴레차</td>
+            <td>오미자차</td>
+            <td>이슬차</td>
+        </tr>
+        <tr>
+            <td>마차</td>
+            <td>매실차</td>
+            <td rowspan="4">기타</td>
+            <td>두충차</td>
+        </tr>
+        <tr>
+            <td rowspan="3">곡물차</td>
+            <td>보리차</td>
+            <td>모과차</td>
+            <td>영지버섯차</td>
+        </tr>
+        <tr>
+            <td>옥수수차</td>
+            <td>산수유차</td>
+            <td>귤강차</td>
+        </tr>
+        <tr>
+            <td>현미차</td>
+            <td>탕자차</td>
+            <td>쌍화차</td>
+        </tr>
+
+     </table>
+
+     <hr>
+
+     <table border="1">
+
+        <tr>
+            <th rowspan="11">TCB</th>
+            <th>Order no: </th>
+            <td colspan="3">#ABC001</td>
+        </tr>
+        <tr>
+            <th>Order Date: </th>
+            <td colspan="3">23-Mar-2016</td>
+        </tr>
+        <tr>
+            <th colspan="4">Customer</th>
+        </tr>
+        <tr>
+            <th>Name: </th>
+            <td colspan="3">John Papas</td>
+        </tr>
+        <tr>
+            <th>Address: </th>
+            <td colspan="3">Independence Day 5th str, 11511</td>
+        </tr>
+        <tr>
+            <th colspan="4">Order Details</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Of Mice and Men</td>
+            <td>Book</td>
+            <td>10.00€</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Les Miserables</td>
+            <td>Book</td>
+            <td>12.00€</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Game of Thrones - S01</td>
+            <td>DVD</td>
+            <td>50.00€</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Samsung Galaxy</td>
+            <td>Mobile Phone</td>
+            <td>200.00€</td>
+        </tr>
+        <tr>
+            <th colspan="3" align="right">Total:</th>
+            <td>272.00€</td>
+        </tr>
+
+     </table>
+
+     <hr>
+
+     
+     <table border="1">
+        <caption align="center"><strong>TIME TABLE</strong></caption>
+
+        <tr>
+            <th>Day/Period</th>
+            <th>I 9:30~10:20</th>
+            <th>II 10:20~11:10</th>
+            <th>III 11:10~12:00</th>
+            <th>12:00~12:40</th>
+            <th>IV 12:40~1:30</th>
+            <th>V 1:30~2:20</th>
+            <th>VI 2:20~3:10</th>
+            <th>VII 3:10~4:00</th>
+        </tr>
+        <tr>
+            <th>Monday</th>
+            <td align="center">Eng</td>
+            <td align="center">Mat</td>
+            <td align="center">Che</td>
+            <th rowspan="6" class="verical-lr">LUNCH</th>
+            <td align="center" colspan="3">LAB</td>
+            <td align="center">Phy</td>
+        </tr>
+        <tr>
+            <th>Tuesday</th>
+            <td align="center" colspan="3">LAB</td>
+            <td align="center">Eng</td>
+            <td align="center">Che</td>
+            <td align="center">Mat</td>
+            <td align="center">SPORTS</td>
+        </tr>
+        <tr>
+            <th>Wednesday</th>
+            <td align="center">Mat</td>
+            <td align="center">Phy</td>
+            <td align="center">Eng</td>
+            <td align="center">Che</td>
+            <td align="center" colspan="3">LIBRARY</td>
+        </tr>
+        <tr>
+            <th align="center">Thursday</th>
+            <td align="center">Phy</td>
+            <td align="center">Eng</td>
+            <td align="center">Che</td>
+            <td align="center" colspan="3">LAB</td>
+            <td align="center">Mat</td>
+        </tr>
+        <tr>
+            <th>Friday</th>
+            <td align="center" colspan="3">LAB</td>
+            <td align="center">Mat</td>
+            <td align="center">Che</td>
+            <td align="center">Eng</td>
+            <td align="center">Phy</td>
+        </tr>
+        <tr>
+            <th>Saturday</th>
+            <td align="center">Eng</td>
+            <td align="center">Che</td>
+            <td align="center">Mat</td>
+            <td align="center" colspan="3">SEMINAR</td>
+            <td align="center">SPORTS</td>
+        </tr>
+        
+     </table>
+
+
+</body>
+</html>

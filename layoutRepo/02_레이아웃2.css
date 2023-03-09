@@ -1,0 +1,161 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.wrap
+{
+    width: 70%;
+    height: 80%;
+    margin-left: 20%;
+    border: 1px solid red;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 2fr 6fr 2fr;
+}
+
+.wrap > .header
+{
+    width: 100%;
+    border: 1px solid red;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.wrap > .header > div
+{
+    height: 100%;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+.wrap > .header > div:nth-child(1)
+{
+    width: 30%;
+}
+
+.wrap > .header > div:nth-child(2)
+{
+    width: 70%;
+}
+
+.wrap > .middle
+{
+    width: 100%;
+    border: 1px solid red;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.wrap > .middle > div
+{
+    height: 100%;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+.wrap > .middle > div:nth-child(1)
+{
+    width: 15%;
+}
+
+.wrap > .middle > div:nth-child(2)
+{
+    width: 70%;
+}
+
+.wrap > .middle > div:nth-child(3)
+{
+    width: 15%;
+}
+
+.wrap > .footer
+{
+    width: 100%;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+/*===========================================*/
+
+.wrap2
+{
+    width: 70%;
+    margin-left: 20%;
+    height: 80%;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1.75fr 0.5fr 6fr 1.75fr;
+}
+
+.wrap2 > .header
+{
+    display: flex;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    justify-content: center;
+    align-content: center;
+}
+
+.wrap2 > .header > div:nth-child(1)
+{
+    width: 20%;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+.wrap2 > .header > div:nth-child(2)
+{
+    width: 60%;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+.wrap2 > .header > div:nth-child(3)
+{
+    width: 20%;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+.wrap2 > div:nth-child(2)
+{
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+.wrap2 > .middle
+{
+    display: flex;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+.wrap2 > .middle > div:nth-child(1)
+{
+    width: 15%;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+.wrap2 > .middle > div:nth-child(2)
+{
+    width: 70%;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+.wrap2 > .middle > div:nth-child(3)
+{
+    width: 15%;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+.wrap2 > .footer
+{
+    border: 1px solid blue;
+    box-sizing: border-box;
+}

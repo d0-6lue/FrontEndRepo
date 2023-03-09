@@ -1,0 +1,42 @@
+body
+{
+    margin: 0px;
+    background-color: gray;
+}
+
+#header
+{
+    width: 60%;
+    height: 200px;
+    margin: auto;
+    background-color: green;
+}
+
+/*
+    [flex] :
+    외부 요소에 대해 내부 요소를 정렬할 때..
+    container : 감싸고 있는 요소
+    item : 안의 요소
+
+*/
+
+#nav
+{
+    height: 100px;    
+    background-color: pink;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#nav > div
+{
+    width: 100px;
+    height: 100%;
+    border: 3px solid darkgray;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

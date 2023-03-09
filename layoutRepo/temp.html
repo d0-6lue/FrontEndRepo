@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap
+        {
+            width: 90%;
+            height: 1000px;
+            margin: auto;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .header
+        {
+            height: 180px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            display: flex;
+        }
+        .header > div
+        {
+            width: 20%;
+            height: 100%;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .header > .search-bar
+        {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header > .search-bar > .search-box
+        {
+            width: 50%;
+            height: 20px;
+        }
+        .header > .search-bar > input:nth-child(2)
+        {
+            width: 100px;
+            height: 27px;
+            margin-left: 1px;
+        }
+        .nav
+        {
+            height: 60px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .nav > ul
+        {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            display: flex;
+            justify-content: start;
+        }
+        .nav > ul > li
+        {
+            width: 175px;
+            height: 100%;
+            box-sizing: border-box;
+            list-style: none;
+        }
+        .nav > ul > li > div
+        {
+            width: 100%;
+            height: 100%;
+            font-size: 15pt;
+            font-weight: bold;
+            color: rgba(230, 159, 25, 1);
+            text-align: center;
+            line-height: 3;
+        }
+        .nav > ul > li > ul
+        {
+            display: none;
+        }
+        .mid
+        {
+            height: 550px;
+            border: 1px solid black;
+            background-color: gainsboro;
+        }
+        .footer
+        {
+            height: 210px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="header">
+            <div></div>
+            <div class="search-bar">
+                <input type="text" class="search-box">
+                <input type="button" value="검색">
+            </div>
+            <div></div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <div>JAVA</div>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li>
+                    <div>SQl</div>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li><div>FrontEnd</div>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li><div>BakcEnd</div>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                <li><div>FrameWork</div>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="mid">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="footer">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+</body>
+</html>

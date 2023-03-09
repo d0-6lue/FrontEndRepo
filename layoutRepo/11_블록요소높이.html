@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록요소 높이</title>
+    <style>
+        #outer
+        {
+            border: 5px solid black;
+        }
+
+        #outer > div 
+        {
+            width: 100px;
+            height: 100px;
+            border: 1px dashed red;
+        }
+        /* absolute, fixed : 떠버리면서 부모요소의 높이도 짧아짐.
+        #outer > div:nth-child(2)
+        {
+            position: absolute;
+        } */
+
+        #outer > div:nth-child(2)
+        {
+            position: sticky;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>블록요소 높이</h1>
+    <hr>
+
+    <!-- 자식요소들이 가진 높이만큼 -->
+
+    <div id="outer">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    
+    <div style="height: 700px;"></div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+/*
+    [flex] :
+    외부 요소에 대해 내부 요소를 정렬할 때..
+    container : 감싸고 있는 요소
+    item : 안의 요소
+
+*/
+
+/*  
+    outer
+        - flex-direction: 방향 ( 꼬챙이을 어디로 꽂을지 )
+        - justify-content: end안의 item들을 가운데(center) ( 시작( start ), 마지막( end ) 등등)  정렬 
+                            ( 마시멜로 간격 조정 )
+        - align-items: center: 교차축(Y)축 기준 회전 ( 꼬챙이 위치 설정 )
+        - flex-wrap :   contente사이즈 유지 됨  ( 마시멜로 포장)
+        - alighn-content: flex-wrap == wrap, width > contents 다음줄로
+                            ( 여러 줄(꼬챙이) 간격 조정 )
+        - flex-content :   교차축 기준 정렬 
+*/
+
+#outer
+{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border: 5px solid black;
+    display: flex;  /* 컨테이너가 됨 */
+
+    /*
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    align-content: center;
+    */
+}
+/* ( block요소는 높이를 지정하지 않으면) 높이를 품고있는 (absolute, float제외) 자식 요소 만큼. */
+/* 안의 요소들은 inline-block 으로 변함. */
+
+
+/*
+    item
+        - align-self :
+        - order ::marker
+*/
+#outer > div
+{
+    width: 100px;
+    height: 100px;
+    border: 1px dashed gray;
+    box-sizing: border-box;
+}
+
+#outer > div:nth-child(2)
+{
+    align-self: center;
+    order: -1;
+}

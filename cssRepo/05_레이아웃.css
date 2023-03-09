@@ -1,0 +1,190 @@
+
+
+.box
+{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    
+    border-width: 5px;
+    border-bottom-color: black;
+    border-right-color:yellow;
+    border-top-color:blue;
+    /* border-top-color border-right-color border-bottom-color border-left-color*/
+    border-style: solid;
+    /* solid dashed dotted */
+    /* border: 5px soloid black; */
+    display: inline-block;
+
+    /*padding-top padding-right padding-bottom padding-left*/
+    padding: 10px;
+    /* 
+    1개 : 모두 같게
+    2개 : 위,아래 / 좌,우 
+    4개 : 위 오른쪽 아래 왼쪽
+    */
+    margin: 30px;
+
+    box-shadow: -10px -10px 35px 10px gray;
+
+    /* border-top-radius border-top-left-radius ..*/
+    border-radius: 45px;
+    /* border-top-left-radius: 55px;
+    border-bottom-right-radius: 20px; */
+    /* border-radius: 25px 30px 15px 60px; */
+
+}
+
+
+
+#t1 {background-color: red;}
+#t2 {background-color: coral;}
+#t3 {background-color:pink;}
+#t4 {background-color: plum;}
+#t5 {background-color:violet;}
+
+
+/* 포지셔닝 */
+
+.outer
+{
+    width: 600px;
+    height: 600px;
+    border: 5px dashed rgb(255, 192, 203);
+
+    /* position의 기본값 static */
+    position: relative;
+    
+}
+
+#div01
+{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+
+/*  relative : 본래 위치에서 이동 */
+/* #div02
+{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+
+    position: relative;
+    top: 100px;
+    left: 100px;
+}  */
+
+/* absolute : position이 static이 아닌 부모 요소를 기준으로 잡음. */
+#div02
+{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+
+    position: absolute;
+    top: 150px;
+    left: 50px;
+}
+
+#div03
+{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+/* 화면에 고정 */
+#fixed-test
+{
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+
+    position: fixed;
+    top: 200px;
+    left: 200px;
+
+    visibility: hidden;
+}
+
+/* 스크롤이 있을때 따라다님 */
+#sticky-test
+{
+    width: 100px;
+    height: 100px;
+    background-color:crimson;
+
+    position:sticky;
+    top:20px;
+    left:20px;
+
+    /* visibility: hidden; */
+    display: none;
+}
+/* 
+    visibility : hidden -> 안보일뿐 자리에 있음.
+    diplay : none -> 사라짐.
+*/
+#vt
+{
+    width: 100px;
+    height: 100px;
+    background-color: darkorange;
+}
+
+.outer > [id^=zt]
+{
+    width: 300px;
+    height: 300px;
+}
+
+#zt01
+{
+    background-color: darkred;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+}
+
+#zt02
+{
+    background-color:aquamarine;
+
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 1;
+}
+
+#zt03
+{
+    background-color:darkolivegreen;
+
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+
+table
+{
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+    border-spacing: 25px;
+    border-collapse: separate;
+    empty-cells: hide;
+    table-layout: fixed;
+    /* word-break:break-all; */
+    outline: auto;
+}
+
+td
+{
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+}

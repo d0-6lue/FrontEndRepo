@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>자바스크립트 개요</h1>
+
+    <!-- 웹 브라우저에서 많이 사용되는 인터프리터 방식의 스크립트 언어(함수, 객체지향)
+    - 인터프리터 방식 : 컴파일 과정 없이 실행하면서 코드를 하나씩 읽어내는 방식이다. 
+    (코드에 문법에 오류가 있으면 실행 시점에 알 수 있다.) -->
+
+    <hr>
+
+    <h2>사용법</h2>
+
+        <h3>인라인( inline )</h3>
+
+        <button onclick="alert('알람임')">버튼(인라인 테스트)</button>
+
+        <h3>내부 ( internal )</h3>
+        <script>
+            console.log('내부 스크립트를 통해 실행됨')
+        </script>
+
+        <h3>외부 ( external )</h3>
+        <script src="./01_개요.js"></script>
+
+    <hr>
+
+    <h2>데이터 입출력</h2>
+
+    <h3>1) 데이터 입력</h3>
+
+    <script>
+
+        // confirm : Boolean값을 받는다
+        /*
+        x = window.confirm('쿠키 정책 어쩌구저쩌구');
+        if(x)
+        {
+            console.log('쿠키 허용');
+        }
+        else{
+            console.log('쿠키 ㄴㄴ');
+        }
+        */
+
+        // prompt : String 값을 받는다
+        /*
+        str = prompt('당신의 계좌 비밀번호는?');
+        console.log(str);
+        */
+    </script>
+
+    <h3>2) 데이터 출력</h3>
+
+    <script>
+        // console.log();
+
+        // window.alert();
+
+        document.write('<h1>&lt;h1&gt;document.write&lt;/h1&gt;</h1>');
+        document.write('<table border="1px"><tr><td>1</td><td>2</td><td>3</td></tr></table>');
+
+    </script>
+
+    <hr>
+
+    <h2>요소 선택</h2>
+
+    <div class="box">1</div>
+    <div class="box" id="target">2</div>
+    <div class="box">3</div>
+
+    <script>
+        // 태그명으로 요소 선택
+        t1 = document.getElementsByTagName('h1');
+        console.log(t1);
+        // 클래스명으로 요소 선택
+        t2 = document.getElementsByClassName('box');
+        console.log(t2);
+        // 아이디로 요소 선택
+        t3 = document.getElementById('target');
+        console.log(t3);
+        // 위는 다 구닥다리임(?)
+
+        /*=====================================================*/
+        console.log('===========================================')
+        // 태그명으로 요소 선택
+        x = document.querySelector('h1');
+        console.log(x);
+        x = document.querySelectorAll('h1');
+        console.log(x);
+        // 클래스명으로 요소 선택
+        x = document.querySelector('.box');
+        console.log(x);
+        x = document.querySelectorAll('.box');
+        console.log(x);
+        // 아이디로 요소 선택
+        x = document.querySelector('#target');
+        console.log(x);
+    </script>
+
+</body>
+</html>

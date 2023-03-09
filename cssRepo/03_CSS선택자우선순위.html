@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자우선순위</title>
+
+    <style>
+
+        #t01{
+            background-color: chartreuse;
+        }
+
+        .c01{
+            background-color: steelblue;
+        }
+
+        div{
+            background-color:blanchedalmond !important;
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>선택자 우선순위</h1>
+
+    <hr>
+
+    <pre>
+        기본적으로는 위보다 아래가 우선순위가 높음.
+
+        tag < class < id < inline < !important
+
+    </pre>
+
+    <div id="t01" class="c01">div-test01</div>
+
+
+
+
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

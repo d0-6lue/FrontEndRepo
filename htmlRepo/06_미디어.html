@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어</title>
+</head>
+<body>
+    <!-- 
+        HTML5 부터는 플러그인 없이
+        미디어( 오디오, 비디오 )를 직접 실행 할 수 있음.
+     -->
+
+    <h1>미디어</h1>
+
+    <h2>&lt;audio&gt;</h2>
+    <audio src="./media/바흐_첼로.mp3" controls></audio>
+    <audio src="../tempMedia/Alarm01.wav" controls></audio>
+    <!--
+        [속성( attribute )]
+        src : 오디오 파일 경로
+        contorls : 재생 도구
+        autoplay : 자동 재생, 일부 브라우저에서 막음.
+        loop : 반복 재생, 일부 브라우저에서 막음.
+        preload : 오디오 파일 다운로드 여부 결정, 일부 브라우저에서 막음.
+     -->
+
+    <h2>&lt;video&gt;</h2>
+    <video src="./media/windmill-112957.mp4" 
+    controls 
+    width="50%" height="50%" 
+    autoplay 
+    loop
+    poster="./media/test.png"></video>
+
+    <!-- 
+        [속성( attribute )]
+        src : 비디오 파일 경로
+        contorls : 재생 도구
+        autoplay : 자동 재생. 일부 브라우저에서 막음.
+        loop : 반복 재생. 일부 브라우저에서 막음.
+        preloard : 비디오 파일 다운로드 여부. 일부 브라우저에서 막음.
+        poster : 썸네일
+        width, height
+     -->
+
+    
+</body>
+</html>

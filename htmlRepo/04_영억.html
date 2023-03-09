@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영역</title>
+    <style>
+        div{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        span{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        블럭 요소 ( blcok )
+            - 한 줄 차지. ( 너비 100% )
+            - <p>, <pre>, <dib>, ...
+            - 너비 조절 가능
+
+        인라인 요소 ( inline )
+            - opening tag 와 closing tag 사이 content area 만큼만 공간을 차지.
+            - <span>, ...
+            - 너비 조절 x ( contetnt area 만큼만 )
+
+
+        인라인 블럭 ( inline - block )
+     -->
+
+    <h1>영역</h1>
+
+    <h2>div vs span</h2>
+
+    <ul>
+        <li><h3>&lt;div&gt;</h3></li>
+        <div>1번째 &lt;div&gt;</div>
+        <div>2번째 &lt;div&gt;</div>
+        <div>3번째 &lt;div&gt;</div>
+
+        <li><h3>&lt;span&gt;</h3></li>
+        <span>1번째 &lt;span&gt;</span>
+        <span>2번째 &lt;span&gt;</span>
+        <span>3번째 &lt;span&gt;</span>
+    </ul>
+    
+    F12 개발자 도구로 확인해보면 각각 차지하는 공간을 볼 수 있음.
+
+</body>
+</html>

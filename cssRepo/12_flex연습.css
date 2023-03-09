@@ -1,0 +1,19 @@
+#wrap
+{
+    height: 800px;
+    border: 10px dashed black;
+    
+    display: flex;
+    /* 기본값 (item의 사이즈가 지정 안되었을때)   align-items: stretch; */
+    /* justify-content: space-evenly;
+    align-items: center; */
+    flex-wrap: wrap;
+}
+
+#wrap > div
+{
+    width: 100px;
+    height: 100px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}

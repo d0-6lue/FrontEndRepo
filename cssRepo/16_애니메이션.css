@@ -1,0 +1,79 @@
+/*=========================================*/
+
+/*
+    transition
+        -duration
+        -delay
+        -property
+        -timing-function : esea
+*/
+
+/*
+    @keyframes
+    {
+        from (== 0% )
+        {
+
+        }
+        50%
+        {
+
+        }
+        to  (== 100%)
+        {
+
+        }
+    }
+
+
+    animation-duration
+    animation-timing-function
+    animation-delay
+    animation-iteration-count
+    animation-direction
+    animation-fill-mode
+    animation-play-state
+*/
+
+
+#target
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+@keyframes greentoblue
+{
+    from
+    {
+        background-color: green;
+    }
+    /* 50%
+    {
+        background-color: pink;
+    } */
+    to
+    {
+        background-color: blue;
+    }
+}
+
+#target:hover
+{
+    /* transform: translateX(300px); */
+    /* background-color: blue; */
+    
+    /* transition: 3s;
+    transition-delay: 0s;
+    transition-timing-function: linear; */
+
+    animation-name: greentoblue;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+}

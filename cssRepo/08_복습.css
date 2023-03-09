@@ -1,0 +1,124 @@
+
+/*=====================================================================*/
+
+.square > div
+        {
+            width: 100px;
+            height: 100px;
+
+            display: inline-block;
+        }
+
+.s1
+{
+    background-color: red;
+    border: 5px solid red;
+}
+
+.s2
+{
+    background-color: blue;
+    border: 5px solid blue;
+}
+
+.s3
+{
+    background-color: green;
+    border: 5px solid green;
+}
+
+/*=====================================================================*/
+
+.box-wrap
+{
+    width: 400px;
+    height: 400px;
+}
+
+.box-wrap > .box
+{
+    position: absolute;
+}
+
+#b1
+{
+    width: 400px;
+    height: 400px;
+    z-index: 100;
+    background-color: red;
+    border: 5px solid red;
+}
+
+#b2
+{
+    width: 200px;
+    height: 200px;
+    z-index: 200;
+    background-color: blue;
+    border: 5px solid blue;
+}
+
+#b3
+{
+    width: 100px;
+    height: 100px;
+    z-index: 400;
+    background-color: green;
+    border: 5px solid green;
+}
+
+.square2
+{
+    width: 350px;
+    height: 350px;
+    border: 10px dotted black;
+    box-sizing: border-box;
+    position: relative;
+}
+/* position 이 static(기본값) 이면 포지션이 absolute 인 하위 요소가 통과함*/
+.square2 > div
+{
+    width: 300px;
+    height: 300px;
+    background-color: gray;
+    position: absolute;
+}
+
+.square2 > div:nth-child(1)
+{
+    background-color: red;
+    top: 0px;
+    left: 0px;
+}
+
+.square2 > div:nth-child(2)
+{
+    background-color: blue;
+    top: 100px;
+    left: 100px;
+    z-index: 10;
+}
+
+.square2 > div:nth-child(3)
+{
+    background-color: green;
+    top: 200px;
+    left: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

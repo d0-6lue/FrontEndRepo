@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 게시판</title>
+    <style>
+        table
+        {
+            width: 350px;
+            height: 550px;
+            border-collapse: collapse;
+        }
+        th, td
+        {
+            border: 1px solid black;
+        }
+        thead > tr > th:first-child
+        {
+            width: 200px
+        }
+        tr:nth-child(even)
+        {
+            background-color: rgb(228, 177, 177);
+        }
+        tr:nth-child(odd)
+        {
+            background-color: rgb(161, 227, 227);
+        }
+
+        thead > tr
+        {
+            background-color: black;
+            color: white;
+            font-size: 2em;
+        }
+        
+        tr:hover
+        {
+            background-color:gray;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">테이블 게시판</h1>
+    <hr>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="hidden" value="101" readonly>1번셀</td>
+                    <td>2번셀</td>
+                    <td>3번셀</td>
+                </tr>
+                <tr>
+                    <td><input type="hidden" value="102" readonly>1번셀</td>
+                    <td>2번셀</td>
+                    <td>3번셀</td>
+                </tr>
+                <tr>
+                    <td><input type="hidden" value="103" readonly>1번셀</td>
+                    <td>2번셀</td>
+                    <td>3번셀</td>
+                </tr>
+                <tr>
+                    <td><input type="hidden" value="104" readonly>1번셀</td>
+                    <td>2번셀</td>
+                    <td>3번셀</td>
+                </tr>
+                <tr>
+                    <td><input type="hidden" value="105" readonly>1번셀</td>
+                    <td>2번셀</td>
+                    <td>3번셀</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

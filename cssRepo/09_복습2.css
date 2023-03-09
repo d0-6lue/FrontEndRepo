@@ -1,0 +1,61 @@
+
+/*=============================================================*/
+
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: gray;
+}
+
+#header
+{
+    margin: auto;  /* margin-left: 20% */
+    padding: 0;
+    width: 60%;
+    height: 200px;
+    box-sizing: border-box;
+    background-color: green;
+
+}
+
+#nav
+{
+    font-size: 0;
+    letter-spacing: 0;
+    word-spacing: 0;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    box-sizing: border-box;
+    background-color: pink;
+}
+
+#nav > div
+{
+    font-size: 15pt;
+    text-align: center;
+    width: 300px;
+    height: 100%;
+    margin-left: 250px;
+    border: 3px solid darkgray;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+#nav > div > a
+{
+    line-height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
