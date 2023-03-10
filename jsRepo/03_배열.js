@@ -107,10 +107,13 @@ function f_ss()
     let arr = ["동", "해", "물", "과"];
     let result = arr.slice(2);
     console.log(result);
+
     result = arr.slice(1);
     console.log(result);
+
     result = arr.slice(1, 2);
     console.log(result);
+
     result = arr.slice(1, 3);
     console.log(result);
     console.log(arr);
@@ -119,14 +122,17 @@ function f_ss()
     result = arr.splice(5);
     console.log(result);
     console.log(arr);
+
     arr = ["동", "해", "물", "과", "백", "두", "산"];
     result = arr.splice(4, 2);
     console.log(result);
     console.log(arr);
+
     arr = ["동", "해", "물", "과", "백", "두", "산"];
     result = arr.splice(3, 0);
     console.log(result);
     console.log(arr);
+    
     arr = ["동", "해", "물", "과", "백", "두", "산"];
     result = arr.splice(3, 1, '글자임', '원플원');
     console.log(result);
