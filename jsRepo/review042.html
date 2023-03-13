@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복습</title>
+</head>
+<body>
+    
+    <h1>복습</h1>
+
+    <button id="btn01">빨강</button>
+    <button id="btn02">초록</button>
+    <button id="btn03">파랑</button>
+
+    <script>
+        h1Tag = document.querySelectorAll("h1")[0];
+        redBtn = document.querySelector("#btn01")
+        redBtn.addEventListener("click", ()=>{
+            h1Tag.style.backgroundColor = 'red'
+        })
+        greenBtn = document.querySelector("#btn02")
+        greenBtn.addEventListener("click", ()=>{
+            h1Tag.style.backgroundColor = 'green'
+        })
+        blueBtn = document.querySelector("#btn03")
+        blueBtn.addEventListener("click", ()=>{
+            h1Tag.style.backgroundColor = 'blue'
+        })
+    </script>
+
+    <hr>
+
+    <button id="b01">버튼</button>
+    <br>
+    <input type="text" id="input01">
+    <br>
+    <div id="div01"></div>
+    <br>
+    <span id="span01"></span>
+
+    <script>
+        const b01 = document.querySelector("#b01");
+        b01.addEventListener("click", ()=>{
+            const msg = prompt("메세지를 입력하세요");
+            document.querySelector("#input01").value = msg;
+            document.querySelector("#div01").innerHTML = msg
+            document.querySelector("#span01").innerHTML = msg
+        });
+    </script>
+
+    <hr>
+
+    <div class="temp">1</div>
+    <div class="temp">2</div>
+    <div class="temp">3</div>
+
+    <script>
+        tempArr = document.querySelectorAll(".temp");
+        // temp[0].addEventListener('click', () => {
+        //     alert(temp[0].innerText);
+        // })
+        // temp[1].addEventListener('click', () => {
+        //     alert(temp[1].innerText);
+        // })
+        // temp[2].addEventListener('click', () => {
+        //     alert(temp[2].innerText);
+        // })
+
+        // for(var i =0; i < tempArr.length; i++)
+        // {
+        //     console.log(i);
+        //     tempArr[i].addEventListener('click', function asdf(event){
+        //         console.log(i);
+        //         alert(tempArr[i].innerHTML);
+        //     });
+        // }
+        /*  var는 안되지만 왜 let은 되는가???
+            var : window에 붙는 전역변수이거나 
+                 블록 스코프를 가짐.
+            let : 
+            closure : 자신을 포함하고 있는 외부함수보다 내부함수가 더 오래 유지되는 경우, 외부 함수 밖에서 내부함수가 호출되더라도 외부함수의 지역 변수에 접근할 수 있는데 이러한 함수를 클로저(Closure)라고 부른다. 
+                    클로저는 반환된 내부함수가 자신이 선언됐을 때의 환경(Lexical environment)인 스코프를 기억하여 자신이 선언됐을 때의 환경(스코프) 밖에서 호출되어도 그 환경(스코프)에 접근할 수 있는 함수를 말한다.
+        */
+
+        // for(let i =0; i < tempArr.length; i++)
+        // {
+        //     tempArr[i].addEventListener('click',function(event){ // Event 객체가 들어가서 event로 지음
+        //         console.log(event);                             // call back 함수?
+        //         console.log(event.target);
+        //         alert(event.target.innerText);
+        //     })
+        // }
+    </script>
+
+    <hr>
+
+    <table border="1">
+        <tr>
+            <td><input type="text" value="01">쉘01</td>
+            <td>쉘02</td>
+            <td>쉘03</td>
+        </tr>
+        <tr>
+            <td>쉘04</td>
+            <td>쉘05</td>
+            <td>쉘06</td>
+        </tr>
+        <tr>
+            <td>쉘07</td>
+            <td>쉘08</td>
+            <td>쉘09</td>
+        </tr>
+    </table>
+
+    <script>
+        // td = document.querySelectorAll("td");
+        // for(let i = 0; i < td.length; i++)
+        // {
+        //     td[i].addEventListener("click", (event)=>{
+        //     alert(event.target.innerHTML);
+        //     });
+        // }
+        table = document.querySelector("table");
+        table.addEventListener("click", (event)=>{
+            // alert(event.currentTarget.innerHTML); // table의 inner가 나옴
+            // alert(event.target.innerHTML); // border 클릭하면 table의 inner가 나옴
+            // alert(event.target.innerText); // border 클릭하면 table의 inner가 나옴
+        });
+    </script>
+
+    <input type="text" id="board-no">
+
+    <script>
+        // td = document.querySelectorAll("td");
+        // for(let i = 0; i < td.length; i++)
+        // {
+        //     td[i].addEventListener("click", (event)=>{
+        //     alert(event.target.innerHTML);
+        //     });
+        // }
+        table = document.querySelector("table");
+        table.addEventListener("click", (event)=>{
+            // alert(event.currentTarget.innerHTML); // table의 inner가 나옴
+            document.querySelector("#board-no").value = event.target.innerHTML;
+        });
+    </script>
+
+</body>
+</html>

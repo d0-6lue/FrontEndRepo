@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복습3</title>
+    <style>
+        .slider
+        {
+            width: 800px;
+            height: 500px;
+            border: 1px solid black;
+        }
+        .slider-img
+        {
+            width: 800px;
+            height: 400px;
+            border: 1px solid black;
+            background-image: url();
+            background-size: cover;
+        }
+        .list-btn
+        {
+
+        }
+        .list-btn > ul
+        {
+            display: flex;
+            list-style-type: none;
+        }
+        .list-btn > ul > li
+        {
+
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>복습3</h1>
+    <button onclick="changeRedBack();">빨간 배경으로 바꾸기</button>
+    <br>
+    100px <input type="radio" name="radio-test" id="test01" value="100px" onchange="chagneSize('#test01');">
+    200px <input type="radio" name="radio-test" id="test02" value="200px" onchange="chagneSize('#test02');"">
+    300px <input type="radio" name="radio-test" id="test03" value="300px" onchange="chagneSize('#test03');"">
+    <button onclick="chagneSize();">사이즈 바꾸기</button>
+
+    <script>
+
+        function changeRedBack()
+        {
+            target = document.querySelector('h1');
+            target.style.backgroundColor = 'red';
+        }
+
+        function chagneSize(select)
+        {
+            target = document.querySelector('h1');
+            // temp = document.querySelectorAll('.test')
+            temp = document.querySelector(select);
+
+            let size = temp.value;
+
+            target.style.width = size;
+            target.style.height = size;
+
+            // for(i = 0; i < temp.length; i++)
+            // {
+            //     if(temp[i].checked)
+            //     {
+            //         size = temp[i].value;
+            //     }
+            // }
+            // target.style.width = size;
+            // target.style.height = size;
+
+            // for(x of temp)
+            // {
+            //     if(x.checked)
+            //     {
+            //         size = x.value;
+            //     }
+            // }
+            // target.style.width = size;
+            // target.style.height = size;
+        }
+
+    </script>
+
+    <hr>
+
+    <div class="slider">
+        <div class="slider-img" value = "1"></div>
+        <script>
+        (async()=>{
+            console.log('start');
+        imgage = document.querySelector('.slider-img');
+            value = imgage.value;
+            if( value == 1)
+                img(6);
+            else if( value == 6)
+                img(1);
+            else
+                img(Number(value)+1);
+
+            setInterval(img(value), 100);
+        })();
+        </script>
+
+        <div class="list-btn">
+            <ul>
+                <li>
+                    <button onclick="prev();"> &lt; </button>
+                </li>
+                <li>
+                    <button onclick="img(1);">그림1</button>
+                </li>
+                <li>
+                    <button onclick="img(2);">그림2</button>
+                </li>
+                <li>
+                    <button onclick="img(3);">그림3</button>
+                </li>
+                <li>
+                    <button onclick="img(4);">그림4</button>
+                </li>
+                <li>
+                    <button onclick="img(5);">그림5</button>
+                </li>
+                <li>
+                    <button onclick="img(6);">그림6</button>
+                </li>
+                <li>
+                    <button onclick="next();"> &gt; </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function prev()
+        {
+            imgage = document.querySelector('.slider-img');
+            value = imgage.value;
+            if( value == 1)
+                img(6);
+            else
+                img(value-1);
+        }
+
+        function next()
+        {
+            imgage = document.querySelector('.slider-img');
+            value = imgage.value;
+            if( value == 6)
+                img(1);
+            else
+                img(Number(value)+1);
+        }
+
+        function img(input)
+        {
+            imgage = document.querySelector('.slider-img');
+            if(input == 1){
+                imgage.style.backgroundColor = 'gray';
+                imgage.value = '1';
+            }
+            else if(input == 2){
+                imgage.style.backgroundColor = 'pink';
+                imgage.value = '2';
+            }
+            else if(input == 3){
+                imgage.style.backgroundColor = 'white';
+                imgage.value = '3';
+            }
+            else if(input == 4){
+                imgage.style.backgroundColor = 'aquamarine';
+                imgage.value = '4';
+            }
+            else if(input == 5){
+                imgage.style.backgroundColor = 'darkorange';
+                imgage.value = '5';
+            }
+            else if(input == 6){
+                imgage.style.backgroundColor = 'paleturquoise';
+                imgage.value = '6';
+            }
+        }
+    </script>
+
+    <hr>
+
+    <div class="gray">얖</div>
+    <div class="gray">얖</div>
+    <div class="gray">얖</div>
+    <div class="gray">얖</div>
+    <div class="gray">얖</div>
+
+    <script>
+
+        target = document.querySelectorAll('.gray');
+        console.log(target);
+        for(i = 0; i < target.length; i++)
+        {
+            target[i].style.backgroundColor = 'gray';
+            target[i].style.border = '1px solid red';
+        }
+
+    </script>
+
+    <hr>
+
+    <input type="text" class="text">
+    <button onclick="megaphone();">버튼</button>
+    <div id="temp">색상변경할 얍</div>
+    <script>
+        function megaphone()
+        {
+            input = document.querySelector('.text');
+            text = input.value;
+            // alert(text);
+            target = document.querySelector('#temp');
+            target.style.backgroundColor = text;
+        }
+    </script>
+
+    <hr>
+
+    <input type="color" id="color">
+    <button onclick="changeColor();">색변경하기</button>
+    <div id="temp2">템프2</div>
+
+    <script>
+        function changeColor()
+        {
+            color = document.querySelector('#color');
+            target = document.querySelector('#temp2');
+            target.style.backgroundColor = color.value;
+        }
+    </script>
+
+    <hr>
+
+    <span id="s01">스팬01</span>
+
+    <script>
+
+        s01 = document.querySelector('#s01');
+
+        console.log( s01.innerText );
+
+        s01.innerHTML = "<h1>글자 바꿔치기<h1>";
+    </script>
+
+    <hr>
+
+</body>
+</html>

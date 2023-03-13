@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복습</title>
+</head>
+<body>
+
+    <h1>복습</h1>
+
+    <hr>
+
+    <div id="target">얖</div>
+
+    <button id="btn01">문자열 입력 받아서 색상변경</button>
+    
+    <script>
+        const target = document.querySelector("#target");
+        const btn01 = document.querySelector('#btn01');
+        btn01.addEventListener("click", ()=>{
+            const str = prompt("변경할 색상은??");
+            target.style.backgroundColor = str;
+        })
+        </script>
+    
+    <br>
+    <input type="text" id="color-input">
+    <button id="btn02">인풋태그로 색상변경</button>
+
+    <script>
+        const btn02 = document.querySelector("#btn02");
+        btn02.addEventListener("click", ()=>{
+            const color = document.querySelector("#color-input").value;
+            target.style.backgroundColor = color;
+        })
+    </script>
+
+    <br>
+    <button id="btn03">문자열 입력 받아서 사이즈 변경</button>
+    
+    <script>
+        const btn03 = document.querySelector("#btn03");
+        btn03.addEventListener("click", ()=>{
+            const x = prompt("넓이를 입력하세요(픽셀단위)");
+            const y = prompt("높이를 입력하세요(픽셀단위)");
+            
+            target.style.width = x + 'px';
+            target.style.height = y + 'px';
+        });
+    </script>
+
+    <br>
+    <input type="text" id="size-input">
+    <button id="btn04">인풋태그 이용해서 사이즈 변경</button>
+
+    <script>
+        const btn04 = document.querySelector("#btn04");
+        btn04.addEventListener("click", () => {
+            const inputSize = document.querySelector("#size-input").value;
+            target.style.width = inputSize + 'px';
+            target.style.height = inputSize + 'px';
+        });
+    </script>
+
+</body>
+</html>
