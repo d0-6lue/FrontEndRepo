@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탐색</title>
+</head>
+<body>
+    
+    <h1>탐색</h1>
+
+    <hr>
+
+    <div id="outer">
+        <div id="target1">표적1</div>
+        <div id="target2">표적2</div>
+        <div id="target3">표적3</div>
+    </div>
+
+
+    <script>
+        const t1 = document.querySelector("#target1");
+        t1.addEventListener("click", function(event){
+            console.log(event.target.parentNode);
+            console.log(event.currentTarget.parentNode);
+            console.log(this.parentNode);
+        });
+
+    </script>
+
+
+
+</body>
+</html>
