@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭 이벤트 실습</title>
+</head>
+<body>
+
+    <h1>주문할 상품 개수를 입력하세요</h1>
+    <input type="text" name="countInput">개
+    <hr>
+    <button id="btn01">확인</button>
+    <hr>
+    <input type="text" name="price">원
+
+    <script>
+        const btn01 = document.querySelector("#btn01");
+        btn01.addEventListener("click", function(){
+
+            const countValue = document.querySelector("input[name=countInput]").value;
+            console.log(countValue);
+            
+            let price = countValue*15000;
+
+            document.querySelector("input[name=price]").value = price;
+        })
+    </script>
+
+    <br><hr><br>
+
+    <h1>충전할 별풍선 개수 선택</h1>
+    
+    <button class="sb-btn">1개</button>
+    <button class="sb-btn">10개</button>
+    <button class="sb-btn">100개</button>
+    <button class="sb-btn">지우기</button>
+
+    <hr>
+    충전하실 별풍선 개수는 총<br>
+    <input type="text" value="0" id="totalSB">개 입니다.
+
+    <script>
+        const sbBtnList = document.querySelectorAll(".sb-btn");
+        console.log(sbBtnList);
+
+        sbBtnList.forEach(function(button){
+            button.addEventListener("click", function(){
+                let btnInner = button.innerHTML;
+                if(btnInner == '1개')
+                {
+                    num = Number(document.querySelector("#totalSB").value);
+                    num = num + 1;
+                    document.querySelector("#totalSB").value = num;
+                }
+                else if(btnInner == '10개')
+                {
+                    num = Number(document.querySelector("#totalSB").value);
+                    num = num + 10;
+                    document.querySelector("#totalSB").value = num;
+                }
+                else if(btnInner == '100개')
+                {
+                    num = Number(document.querySelector("#totalSB").value);
+                    num = num + 100;
+                    document.querySelector("#totalSB").value = num;
+                }
+                else if(btnInner == '지우기')
+                {
+                    document.querySelector("#totalSB").value = 0;
+                }
+            })
+        });
+    </script>
+
+    <br><hr><br>
+
+    <input type="text" name="str">
+    <div id="alterCount"></div>
+
+    <script>
+        let str = document.querySelector("input[name=str]");
+        str.addEventListener("keydown", function(){
+            setTimeout(function(){
+                let str = document.querySelector("input[name=str]");
+                let strValue = str.value;
+                console.log(strValue);
+                let strValueLen = strValue.length ;
+                console.log(strValueLen);
+            document.querySelector("#alterCount").innerHTML = `현재 ${strValueLen} 글자 입력하셨습니다`;
+            } , 100);
+        });
+        
+    </script>
+
+    
+</body>
+</html>

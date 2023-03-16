@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트_폼</title>
+</head>
+<body>
+
+    <h1>이벤트_폼</h1>
+
+    <input type="text" name="memberId">
+    <button id="btn-check">버튼</button>
+
+    <select name="food">
+        <option value="111">짜장면</option>
+        <option value="222" selected="true">짬뽕</option>
+        <option value="333">탕수육</option>
+    </select>
+
+    <script>
+        // const x = document.querySelector("input[name=memberId]");
+
+        // // focus : cursor 깜빡깜빡, blur
+        // x.addEventListener("change", function(){
+        //     console.log("asdferdf");
+        // })
+
+        // x.focus();
+    </script>
+
+    <hr>
+
+    롤 <input type="checkbox" value="lol" name="game">
+    테트리스 <input type="checkbox" value="tetris" name="game">
+    콜오브듀티 <input type="checkbox" value="cod" name="game">
+    <br>
+    <button id="btn01">버튼</button>
+
+    <script>
+        const btn01 = document.querySelector("#btn01");
+        btn01.addEventListener("click", function(){
+            const lol = document.querySelector("input[value=lol]");
+            lol.checked = true;
+        });
+    </script>
+
+    <script>
+        const btnCheck = document.querySelector("#btn-check");
+        btnCheck.addEventListener("click", function(){
+            const str = document.querySelector("input[name=memberId]").value;
+            // let temp = "input[value="+ str + "]";
+            const checkbox = document.querySelector(`input[value=${str}]`);
+            checkbox.checked = true;
+        });
+    </script>
+
+
+    
+
+
+
+
+
+
+
+    
+</body>
+</html>

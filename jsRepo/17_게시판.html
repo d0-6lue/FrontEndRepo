@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="./17_게시판.css">
+    <script defer src="./17_게시판.js"></script>
+</head>
+<body>
+
+
+    <div id="wrap">
+
+        <header>
+            <div></div>
+            <div id="div-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/DaangnMarket_logo.png/800px-DaangnMarket_logo.png" alt="로고 이미지">
+            </div>
+            <div id="login-area">
+                <form>
+                    <div>
+                        <input type="text" name="memberId" placeholder="아이디">
+                        <input type="password" name="memberPw" placeholder="비밀번호">
+                    </div>
+                    <div>
+                        <button id="login-btn" onclick="return loginCheck();">로그인</button>
+                    </div>
+                </form>
+            </div>
+        </header>
+    
+        <nav>
+            <div>
+                <a href="/app/notice/list">
+                    공지사항
+                </a>
+            </div>
+            <div>
+                <a href="/app/gallary/list">
+                    갤러리
+                </a>
+            </div>
+            <div>
+                <a href="/app/freeboard/list">
+                    자유게시판
+                </a>
+            </div>
+        </nav>
+
+        <main>
+        
+            <table id="board">
+                <tr>
+                    <th>글번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>조회수</th>
+                    <th>작성일자</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>아무거나</td>
+                    <td>아무개</td>
+                    <td>153,247</td>
+                    <td>2023/03/16</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>아무거나</td>
+                    <td>아무개</td>
+                    <td>153,247</td>
+                    <td>2023/03/16</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>아무거나</td>
+                    <td>아무개</td>
+                    <td>153,247</td>
+                    <td>2023/03/16</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>아무거나</td>
+                    <td>아무개</td>
+                    <td>153,247</td>
+                    <td>2023/03/16</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>아무거나</td>
+                    <td>아무개</td>
+                    <td>153,247</td>
+                    <td>2023/03/16</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>아무거나</td>
+                    <td>아무개</td>
+                    <td>153,247</td>
+                    <td>2023/03/16</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>아무거나</td>
+                    <td>아무개</td>
+                    <td>153,247</td>
+                    <td>2023/03/16</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>아무거나</td>
+                    <td>아무개</td>
+                    <td>153,247</td>
+                    <td>2023/03/16</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>아무거나</td>
+                    <td>아무개</td>
+                    <td>153,247</td>
+                    <td>2023/03/16</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>아무거나</td>
+                    <td>아무개</td>
+                    <td>153,247</td>
+                    <td>2023/03/16</td>
+                </tr>
+            </table>
+
+
+
+        </main>
+
+    </div>
+    
+
+
+
+
+
+</body>
+</html>
