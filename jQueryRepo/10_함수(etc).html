@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수(etc)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        div
+        {
+            height: 10px;
+            border: 1px solid darkgray;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>함수(etc)</h1>
+    <hr>
+    <ul>
+        <li>.each()</li>
+        <li>.is()</li>
+    </ul>
+
+    <div></div>
+    <div class="box"></div>
+    <div></div>
+
+    <script>
+
+        // Javascript :  forEach
+        /*
+        const divList = document.querySelectorAll("div");
+
+        divList.forEach(function(elem){
+            console.log(elem);
+        });
+        */
+
+        // jQuery : each
+        const divArr = $("div");
+
+        /* forEach 안됨.
+        divArr.forEach(function(elem){
+            console.log(elem);
+        })
+        */
+
+        // divArr.each(function(i){
+        //     console.log(i); // 인덱스값
+        //     console.log(divArr.eq(i));
+        // });
+
+        // divArr.each(function(i, elem){
+        //     console.log(i);      // 인덱스값
+        //     console.log(elem);   // 요소
+        // });
+
+        divArr.each(function(i, elem){
+            if($(elem).is(".box"))
+                console.log(elem);   // 요소
+        });
+
+    </script>
+
+
+
+
+
+    
+</body>
+</html>

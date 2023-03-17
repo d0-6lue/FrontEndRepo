@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+
+    <h1>이벤트</h1>
+    <hr>
+
+    <h2>표적1</h2>
+    <h2>표적2</h2>
+    <h2>표적3</h2>
+
+
+
+    <script>
+
+        // $("h2").click(function(){
+        //     console.log(this);
+        // })
+
+        // $("h2").dblclick(function(){
+        //     console.log(this);
+        // })
+        
+        // $("h2").mouseover(function(){
+        //     console.log(this);
+        // })
+
+        // $("h2").mousedown(function(){
+        //     console.log(this);
+        // })
+        
+        // $("h2").mouseup(function(){
+        //     console.log(this);
+        // })
+
+        $("h2").on("click", function(){
+            console.log(this);
+        })
+        // 이벤트 제거
+        $("h2").off('click')
+
+        // 1회용 이벤트
+        $("h2").one("click", function(){
+            console.log(this);
+        })
+
+        </script>
+
+    
+</body>
+</html>

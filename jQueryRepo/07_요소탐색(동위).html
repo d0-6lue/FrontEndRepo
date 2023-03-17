@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소탐색(동위)</title>
+    <style>
+        .wrap, .wrap *{
+            border: 1px solid gray;
+            color : gray;
+            display: block;
+            padding: 5px;
+            margin:15px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    
+    <h1>요소탐색(동위, Sibling)</h1>
+    <hr>
+
+    <h3>동위 메소드 : 동위 요소들 선택</h3>
+    <div class="wrap">
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+
+    <script>
+        /*
+            - siblings()
+            - siblings("선택자")
+            - prev()
+            - prevAll()
+            - prevUntil("선택자")
+            - next()
+            - nextAll()
+            - nextUntil("선택자")
+        */
+
+        // $("h2").siblings().css("color","red");
+        // $("h2").siblings("p").css("color","red");
+        // $("h2").prev().css("color","red");
+        // $("h2").prevAll().css("color","red");
+        // $("h2").prevUntil("p").css("color","red");
+        // $("h2").next().css("color","red");
+        // $("h2").nextAll().css("color","red");
+        // $("h2").nextUntil("p").css("color","red");
+        
+        // $("h2").nextUntil("p")
+        //     .css("color","red")
+        //     .css("backgroundColor", "blue")
+        //     .css("border" ,"3px solid green")
+        // ;
+
+        const temp = {
+            color : "red",
+            backgroundColor : "blue",
+            border : "3px solid green"
+        };
+
+        $("h2").nextUntil("p").css(temp);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수(Content영역)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    
+    <h1>함수 - Content영역</h1>
+    <!-- '여는 태그'와 '닫는 태그' 사이 영역 -->
+
+    <hr>
+    <ul>
+        <li>.text() : content영역을 반환</li>
+        <li>.text("변경할 문자열") : content 영역을 매개변수의 문자열로 변경</li>
+        <li>.html() : content영역의 HTML문을 반환</li> 
+        <li>.html("변경할 HTML구문") : content 영역의 HTML문을 매개변수의 HTML문으로 변경</li>
+    </ul>
+
+    <span id="target">여기가 content 영역<br>
+        <a>에이 태그</a>
+    </span>
+
+    <script>
+        console.log($("#target").text());
+        // $("#target").text('content 영역 어딘지 몰랐음 ㅋㅋ');
+        // console.log($("#target").text());
+
+        // console.log($("#target").html());
+        // $("#target").html('<h3>아 태그 사이가 content 영역이구나 ㅋㅋ</h3>');
+        // console.log($("#target").html());
+        // console.log($("#target").text());
+
+        const result = $("#target").children().attr("href","https://www.naver.com");
+
+    </script>
+
+</body>
+</html>

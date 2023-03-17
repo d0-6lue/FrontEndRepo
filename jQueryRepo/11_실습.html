@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        html, body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .wrap{
+            width: 80%;
+            height: 100vh;
+        }
+        header{
+            width: 100%;
+            height: 50px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        nav{
+            width: 100%;
+            height: 85px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        main{
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+    </style>
+</head>
+<body>
+    <!-- 게시판을 테이블로 만들어서 행을 클릭했을때, 해당 게시글의 정보가 알람으로 나오도록 -->
+    
+    <div class="wrap">
+        <header>
+
+        </header>
+        <nav>
+
+        </nav>
+        <main>
+            <table border="1px">
+                <tr>
+                    <th>글번호</th>
+                    <th>글제목</th>
+                    <th>댓글수</th>
+                    <th>작성자</th>
+                    <th>조회수</th>
+                    <th>작성일자</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>3월 24일 상반기 작계훈련 참가바랍니다.</td>
+                    <td>1</td>
+                    <td>예비군동대</td>
+                    <td>3</td>
+                    <td>2023/02/28</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3월 24일 상반기 작계훈련 참가바랍니다.</td>
+                    <td>1</td>
+                    <td>예비군동대</td>
+                    <td>3</td>
+                    <td>2023/02/28</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>3월 24일 상반기 작계훈련 참가바랍니다.</td>
+                    <td>1</td>
+                    <td>예비군동대</td>
+                    <td>3</td>
+                    <td>2023/02/28</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>3월 24일 상반기 작계훈련 참가바랍니다.</td>
+                    <td>1</td>
+                    <td>예비군동대</td>
+                    <td>3</td>
+                    <td>2023/02/28</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>3월 24일 상반기 작계훈련 참가바랍니다.</td>
+                    <td>1</td>
+                    <td>예비군동대</td>
+                    <td>3</td>
+                    <td>2023/02/28</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>3월 24일 상반기 작계훈련 참가바랍니다.</td>
+                    <td>1</td>
+                    <td>예비군동대</td>
+                    <td>3</td>
+                    <td>2023/02/28</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>3월 24일 상반기 작계훈련 참가바랍니다.</td>
+                    <td>1</td>
+                    <td>예비군동대</td>
+                    <td>3</td>
+                    <td>2023/02/28</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>3월 24일 상반기 작계훈련 참가바랍니다.</td>
+                    <td>1</td>
+                    <td>예비군동대</td>
+                    <td>3</td>
+                    <td>2023/02/28</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>3월 24일 상반기 작계훈련 참가바랍니다.</td>
+                    <td>1</td>
+                    <td>예비군동대</td>
+                    <td>3</td>
+                    <td>2023/02/28</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>3월 24일 상반기 작계훈련 참가바랍니다.</td>
+                    <td>1</td>
+                    <td>예비군동대</td>
+                    <td>3</td>
+                    <td>2023/02/28</td>
+                </tr>
+            </table>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+
+    <script>
+
+        let tdArr = $("td");
+
+        tdArr.click(function(i){
+            let trArr = $(this).parent();
+            console.log($(this).parent());
+            let tdArr = trArr.children(i);
+            console.log(tdArr);
+            str = "";
+            str += '글번호:' + $(tdArr[0]).text();
+            str += ' 글제목:' + $(tdArr[1]).text();
+            str += '\n'
+            str += ' 작성자:' + $(tdArr[3]).text();
+            str += ' 작성일자:' + $(tdArr[5]).text();
+            str += ' 조회수:' + $(tdArr[4]).text();
+            str += ' 댓글수:' + $(tdArr[2]).text();
+
+            alert(str);
+        })
+
+    </script>
+
+</body>
+</html>

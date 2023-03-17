@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수(요소 추가 및 삭제)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+
+    <h1>함수 - 요소 추가 및 삭제</h1>
+    <hr>
+
+    <h2>동적으로 추가</h2>
+    <button id="btn">요소 생성</button>
+
+    <div id="area1">
+
+    </div>
+
+    <script>
+        $("#btn").click(function(){
+
+            // 요소 추가 (div[id=area1] 안에)
+            // Javascript 방식
+            /*
+            const a = document.createElement("h1");
+            const b = document.createTextNode("글자자자자자자자자");
+            a.appendChild(b);
+
+            const area1 = document.querySelector("#area1");
+            area1.appendChild(a);
+            */
+
+            // jQuery 방식
+            const elem = $("<h1>글자아아아아아ㅏ아아ㅏ아ㅏ아ㅏ</h1>");
+            $("#area1").append(elem);
+        });
+    </script>
+
+    <hr>
+
+    <h2>삽입 관련 메소드</h2>
+    <pre>
+        A 요소에 B를 .. 
+
+        $(A).append(B)
+        A 요소 내부의 뒷부분에 B 추가 (자식)
+
+        $(A).prepend(B)
+        A 요소 내부의 앞부분에 B 추가 (자식)
+
+        $(A).after(B)
+        A 요소 뒷부분에 B 추가 (형제)
+
+        $(A).before(B)
+        A 요소 앞부분에 B 추가 (형제)
+
+        --------------------------------------------------------
+        B를 A요소에 ..
+
+        $(B).appendTo(A)
+        A 요소 내부의 뒷부분에 B 추가 (자식)
+
+        $(B).prependTo(A)
+        A 요소 내부의 앞부분에 B 추가 (자식)
+
+        $(B).insertAfter(A)
+        A 요소 뒷부분에 B 추가 (형제)
+
+        $(B).insertBefore(A)
+        A 요소 앞부분에 B 추가 (형제)
+
+    </pre>
+
+    <h1 id="t1"><span>A</span></h1>
+    <h1 id="t2"><span>A</span></h1>
+    <h1 id="t3"><span>A</span></h1>
+    <h1 id="t4"><span>A</span></h1>
+
+    <script>
+        $("#t1").append("어펜드");
+        $("#t2").prepend("프리펜드");
+        $("#t3").after("애프터");
+        $("#t4").before("비포");
+
+        $("span").eq(0).appendTo($("#t1"));
+    </script>
+
+
+
+
+</body>
+</html>
