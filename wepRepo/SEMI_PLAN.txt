@@ -1,0 +1,29 @@
+semi project
+[기획]
+
+- 회원 ( 아이디 중복 검사 )
+ no/ id/ pwd/ nick/ profile/ 취미/ 탈퇴여부/ 가입일자/ 마지막수정일자 
+ 
+- 공지사항 ( 페이징 )
+ 관리자만 작성 가능
+ no/  title/ content/ enrollDate/ 삭제여부/ 수정일시/ 조회수
+ 
+- 자유게시판 ( 페이징, 첨부파일, 카테고리 선택 가능 )
+ 조회는 누가나 가능
+ 작성은 회원만 가능
+ no/  title/ content/ writerNo/ enrollDate/ 삭제여부/ 수정일시/ 조회수 
+
+- 카테고리
+ no/ name
+
+- 댓글
+ no/ refBoardNo/ content/ writerNo/ enrollDate/ 삭제여부
+
+- 첨부파일
+ no/ refBoardNo(참조하는 게시글 번호)/ originName/ changeName/ filePath/ 등록일시/ 삭제여부
+
+- 갤러리
+ no/ title/ content/ writerNo/ originName/ changeName/ enrollDate/ status(삭제여부) /hit(조회수)
+
+- 시퀀스
+ 회원, 공지사항, 자유게시판, 댓글, 첨부파일, 갤러리
