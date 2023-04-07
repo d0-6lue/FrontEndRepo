@@ -1,0 +1,84 @@
+.join-area {
+    width: 75%;
+    height: 50%;
+
+    margin: auto;
+    margin-top: 15%;
+
+    display: grid;
+    grid-template-rows: repeat(5, 30px) 100px 120px 1px;
+    row-gap: 10px;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 3px;
+}
+
+.join-area > span {
+    font-size: 18px;
+    align-self: center;
+    text-align: center;
+}
+
+input[name=memberProfile] {
+    display: flex;
+    align-items: center;
+}
+
+.pwd-error-msg {
+    color: red;
+}
+
+.hobby-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.upload-img {
+    height: 40px;
+
+    align-self: center;
+
+    border: 1px solid #dddddd;
+    color: #999999;
+}
+
+.file-div {
+    display: flex;
+}
+
+label[for="memberProfile"] {
+    height: 40px;
+
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    background-color: #999999;
+
+    cursor: pointer;
+}
+
+#memberProfile {
+    width: 0;
+    height: 0;
+}
+
+input[value="회원가입"] {
+    width: 200px;
+    justify-self: center;
+    align-self: baseline;
+}
+
+input[value="초기화"] {
+    width: 200px;
+    justify-self: center;
+    align-self: baseline;
+}
+
+.preview {
+    width: 120px;
+    height: 120px;
+    border: 1px solid gray;
+}
