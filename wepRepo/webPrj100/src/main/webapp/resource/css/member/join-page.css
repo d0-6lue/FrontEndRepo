@@ -1,0 +1,59 @@
+.join-form-area {
+    width: 70%;
+    height: 768px;
+    margin: auto;
+    margin-top: 50px;
+
+    display: grid;
+    grid-template-columns: 550px 90px 200px;
+    grid-template-rows: repeat(6, 60px 16px) 90px 16px;
+    justify-content: center;
+}
+
+.availability-alert {
+    grid-column: span 2;
+}
+
+.profile-img {
+    grid-row: span 4;
+    width: 120px;
+    height: 120px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+input[type=file] {
+    align-self: baseline;
+}
+
+.join-input-area {
+    width: 530px;
+    height: 48px;
+    justify-self: center;
+    align-self: center;
+}
+
+.join-btn-area {
+    width: 85px;
+    height: 40px;
+    justify-self: center;
+    align-self: center;
+
+    border: none;
+    background-color: aquamarine;
+}
+
+.submit-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / -1;
+}
+
+input[type=submit] {
+    width: 150px;
+    height: 50px;
+}
+
