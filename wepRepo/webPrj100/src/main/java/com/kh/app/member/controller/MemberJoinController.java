@@ -11,19 +11,19 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/member/join")
 public class MemberJoinController extends HttpServlet {
-
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+		
 		req.getRequestDispatcher("/WEB-INF/views/member/join-page.jsp").forward(req, resp);
-	
+		
 	}
 	
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-	
-	
+		
+		
+		
 	}
 }

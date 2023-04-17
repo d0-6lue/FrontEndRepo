@@ -232,7 +232,7 @@ emailInputArea.addEventListener("change", function(){
 
 
 // 연락처 유효성 검사
-const phoneRegExp = /[01]{3}+\d{3,4}+\d{4}/;
+const phoneRegExp = /(^01([0|1|6|7|8|9]))(\d{3,4})(\d{4}$)/;
 
 const phoneInputArea = document.querySelector("input[name=memberPhone]");
 
@@ -240,13 +240,13 @@ phoneInputArea.addEventListener("change", function(){
     const phoneCheckAlter = document.querySelector(".check-phone-availability");
 
     const phoneString = phoneInputArea.value;
-    if(phoneRegExp.test(phoneString) == true) {
+    if(phoneRegExp.test(phoneString) == false) {
         phoneCheckAlter.innerText = "연락처 형식에 맞게 작성해주세요."
     }
-    if(phoneString.length > 11) {
+    else if(phoneString.length > 11) {
         phoneCheckAlter.innerText = "연락처 형식에 맞게 작성해주세요.";
     }
-    if(phoneString.length < 10) {
+    else if(phoneString.length < 10) {
         phoneCheckAlter.innerText = "연락처 형식에 맞게 작성해주세요.";
     }
     else {
