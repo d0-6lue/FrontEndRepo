@@ -1,4 +1,3 @@
-
 // 프로필 사진 미리보기
 const fileTag = document.querySelector("input[name=memberProfile]");
 
@@ -89,30 +88,31 @@ idInputArea.addEventListener("change", function() {
 });
 
 
+
 // 아이디 중복 검사
-function duplicateCheckId() {
-	
-    const memberId = document.querySelector("input[name=memberId]").value;
-
-	const xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = function() {
-        if(xhr.readyState === XMLHttpRequest.DONE) {
-            if(xhr.status === 200){
-                const result = xhr.response;
-                console.log(result.result);
-            }
-            else {
-                console.log('request에 뭔가 문제');
-            }
-        }
+const idCheckBtn = document.querySelector(".id-duplicate-check-btn");
+idCheckBtn.addEventListener("click", function(){
+    const memberId = document.querySelector("input[name=memberId").value;
+    console.log(memberId);
+    const idData = {
+        'memberId' : memberId
     };
+    console.log(idData);
 
-    xhr.open('POST', '/member/join/checkId', true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.send(memberId);
+    fetch("/app100/member/check", {
+        method : 'post',
+        headers: {
+			"Content-Type": "application/json",
+		},
+        body : JSON.stringify(idData),
 
-};
+    })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch(err => {
+        console.log('Fetch Error', err);
+    })
+})
 
 
 // 비밀번호는 새로입력할 때마다 초기화
@@ -197,6 +197,28 @@ pwd2InputArea.addEventListener("change", function() {
 
 
 // 닉네임 중복 검사
+
+
+// function duplicateCheckID() {
+
+//     const memberId = document.querySelector("input[name=memberId");
+//     const idData = {
+//         'memberId' : memberId
+//     };
+
+//     fetch("/mebmer/join/checkId", {
+//         method : 'post',
+//         body : idData,
+
+//     })
+//     .then((response) => response.json())
+//     .then((data) => console.log(data))
+//     .catch(err => {
+//         console.log('Fetch Error', err);
+//     })
+
+// }
+
 
 
 // 닉네임 유효성 검사
