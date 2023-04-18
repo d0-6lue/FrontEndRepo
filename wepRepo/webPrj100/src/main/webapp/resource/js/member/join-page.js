@@ -1,3 +1,4 @@
+
 // 프로필 사진 미리보기
 const fileTag = document.querySelector("input[name=memberProfile]");
 
@@ -89,7 +90,29 @@ idInputArea.addEventListener("change", function() {
 
 
 // 아이디 중복 검사
+function duplicateCheckId() {
+	
+    const memberId = document.querySelector("input[name=memberId]").value;
 
+	const xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState === XMLHttpRequest.DONE) {
+            if(xhr.status === 200){
+                const result = xhr.response;
+                console.log(result.result);
+            }
+            else {
+                console.log('request에 뭔가 문제');
+            }
+        }
+    };
+
+    xhr.open('POST', '/member/join/checkId', true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send(memberId);
+
+};
 
 
 // 비밀번호는 새로입력할 때마다 초기화

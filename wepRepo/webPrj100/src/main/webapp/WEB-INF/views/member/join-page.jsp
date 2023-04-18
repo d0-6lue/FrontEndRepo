@@ -13,10 +13,10 @@
         <%@ include file="/WEB-INF/views/common/header.jsp" %>
 
         <main>
-            <form action="" method="">
+            <form action="/member/join" method="POST" enctype="multipart/form-data" >
                 <div class="join-form-area">
                     <input class="join-input-area" type="text" name="memberId" placeholder="아이디는 숫자,영대소문자 6자 이상 12자 이하로 입력하셔야합니다.">
-                    <button class="join-btn-area" type="button">중복확인</button>
+                    <button class="join-btn-area" type="button" onclick="duplicateCheckId();">중복확인</button>
                     <div class="profile-img">
                         프로필 사진
                     </div>
