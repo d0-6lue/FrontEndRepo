@@ -1,13 +1,12 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<%-- <c:url value="/" var="root" /> --%>
 
 <c:set var="root" value="${pageContext.request.contextPath}"></c:set>
 
 <link rel="stylesheet" href="${root}/resource/css/common/header.css">
-
-
 <header>
     <div class="logo">
         <a href="${root}/home">
@@ -20,6 +19,7 @@
             <li class="nav-list-elem"><a href="">자유게시판</a></li>
             <li class="nav-list-elem"><a href="">갤러리</a></li>
             <li class="nav-list-elem"><a href="">문의게시판</a></li>
+            <li class="nav-list-elem"><a href="${root }/chat/home">채팅방</a></li>
         </ul>
         <div class="nav-util">
             <button class="login-btn">로그인</button>

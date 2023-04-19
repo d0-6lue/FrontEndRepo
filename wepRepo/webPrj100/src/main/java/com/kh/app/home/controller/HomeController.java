@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet({"/home", "/main"})
 public class HomeController extends HttpServlet {
-	
+
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+
 		req.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(req, resp);
-		
+	
 	}
 	
 	

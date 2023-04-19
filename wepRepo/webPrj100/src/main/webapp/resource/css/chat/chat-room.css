@@ -1,0 +1,54 @@
+main {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    background-color: gainsboro;
+}
+
+
+.chat-area {
+    width: 800px;
+    height: 768px;  
+    margin: auto; 
+    
+    background-color: aliceblue;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.chat-input {
+    width: 100%;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[name=chatContent] {
+    width: 700px;
+    height: 24px;
+}
+
+.send {
+    width: 150px;
+    height: 32px;
+}
+
+.others-chat-box {
+
+}
+
+.my-chat-box {
+    text-align: end;
+}
+
+.others-name {
+    border: 1px solid black
+}
+
+.i-my-me-mine {
+    border: 1px solid black;
+}

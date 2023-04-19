@@ -1,0 +1,44 @@
+main {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    background-color: gainsboro;
+}
+
+.chatroom-util {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    justify-content: end;
+
+    list-style: none;
+}
+
+.chatroom-util-btn {
+    margin: 5px;
+}
+
+.chatroom-list {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(10, 200px);
+
+    justify-content: center;
+
+    overflow-x: hidden;
+}
+
+.chatroom {
+    width: 150px;
+    height: 150px;
+
+    justify-self: center;
+
+    border: 3px solid black;
+}
