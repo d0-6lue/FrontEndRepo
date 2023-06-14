@@ -1,0 +1,25 @@
+Source Folder
+
+	src/main/java
+	src/main/resources		// mybatis-config.xml 같은 파일들
+	src/test/java
+	src/test/resources
+	
+Libray
+
+	JRE System Libray		// Java 관련 기본 라이브러리 ( JDK 안의 JRE )
+	Maven Dependencies		// Maven 라이브러리
+	
+src
+	프로젝트 관련 소스
+
+target
+	프로젝트 결과물이 담기는 폴더
+
+
+pom.xml
+	Project Object Model
+	
+
+
+
